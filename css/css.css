@@ -1,0 +1,1285 @@
+
+
+/* css/reset.css */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+}
+
+blockquote, q {
+    quotes: "" "";
+}
+
+.button-group button {
+    font: 100 76% verdana;
+    text-decoration: none;
+    background-color: #E4E4E4;
+    color: #333;
+    cursor: hand;
+    vertical-align: middle;
+    border: 2px solid #797979;
+    border-top-color: #FFF;
+    border-left-color: #FFF;
+    margin: 2px;
+    padding: 2px;
+}
+
+.button-group button.default {
+    font-weight: bold;
+}
+
+.button-group button:hover, .button-group button.hover {
+    border: 2px solid #90A029;
+    background-color: #EBF09E;
+    border-top-color: #FFF;
+    border-left-color: #FFF;
+}
+
+.button-group button:active {
+    border: 2px solid #E4E4E4;
+    background-color: #BBB;
+    border-top-color: #333;
+    border-left-color: #333;
+}
+
+.yui-override-padding {
+    padding: 0 !important;
+}
+
+/* css/default.css */
+html {
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 62.5% / 1.2 Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    display: none;
+}
+
+strong {
+    font-weight: bold;
+}
+
+abbr, acronym {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #039;
+    outline: none;
+}
+
+img {
+    border: none;
+}
+
+a:visited, #footer a:visited {
+    color: #7495c6;
+}
+
+#body .more a:visited, #body .action a:visited, #body .actions a:visited, #body .cancel:visited, #body .more:visited, .nav-link:visited, .nav-links a:visited {
+    color: #039;
+}
+
+input, select, textarea, button {
+    font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    line-height: 1;
+}
+
+textarea {
+    line-height: 1.2;
+}
+
+input.primary, .btn-primary {
+    background: #39c url(http://static01.linkedin.com/img/bg/bg_btn_500x52.png) no-repeat;
+    color: #fff;
+    font-weight: bold;
+    font-size: 120%;
+    border: 1px solid #069;
+    padding: 3px 5px 2px;*
+
+padding:
+    5px 0 3px;
+
+vertical-align:top;
+}
+
+input.secondary, .btn-second {
+    background: #ddd url(http://static01.linkedin.com/img/bg/bg_btn_500x52.png) no-repeat;
+    color: #555;
+    font-weight: bold;
+    font-size: 120%;
+    border: 1px solid #999;
+    padding: 3px 5px 2px;*
+
+padding:
+    5px 1px 3px;
+
+vertical-align:top;
+}
+
+body:first-of-type input.primary, body:first-of-type .btn-primary, body:first-of-type input.secondary, body:first-of-type .btn-second {
+    padding: 5px 8px 4px;
+}
+
+input.hint, textarea.hint {
+    color: #999;
+}
+
+div.alert img, div.errorbox img {
+    display: none;
+}
+
+div.alert p, div.errorbox p, div.alert h3 {
+    font-size: 13px;
+    margin: 7px 21px 0 7px;*
+
+margin:
+    14px 21px 0 7px;
+
+_margin:
+    7px 21px 6px 7px;
+}
+
+div.alert h3 {
+    font-weight: bold;
+}
+
+div.alert.attention {
+    background: #fff5cc url(http://static02.linkedin.com/img/icon/icon_status_info_26x26.gif) no-repeat 7px 7px;
+}
+
+div.alert.error, div.errorbox {
+    background: #fee url(http://static03.linkedin.com/img/icon/icon_status_fail_26x26.gif) no-repeat 7px 7px;
+}
+
+div.alert.success {
+    background: #e6f8dd url(http://static01.linkedin.com/img/icon/icon_status_success_26x26.gif) no-repeat 7px 7px;
+}
+
+div.alert.notice {
+    background: #ddf0f8 url(http://static01.linkedin.com/img/icon/icon_status_info_blue_26x26.gif) no-repeat 7px 7px;
+}
+
+div.alert .dismiss {
+    background: url(http://static02.linkedin.com/img/sprite/sprite_globalnav_v6.png) 100% -356px no-repeat;
+    cursor: pointer;
+    display: block;
+    padding: 7px 0 2px;
+    position: absolute;
+    text-indent: -12345px;
+    top: 3px;
+    right: 10px;
+    _right: 20px;
+    width: 18px;
+    height: 18px;
+}
+
+div.alert a, div.alert a:visited {
+    color: #039;
+    text-decoration: underline;
+}
+
+#notice-privacy {
+    position: relative;
+    _height: 1%;
+}
+
+#notice-privacy a:visited {
+    color: #039;
+}
+
+#notice-privacy p {
+    padding-right: 15px;
+}
+
+#notice-close {
+    background: url(http://static02.linkedin.com/img/sprite/sprite_globalnav_v6.png) 100% -356px no-repeat;
+    display: block;
+    padding: 7px 0 2px;
+    position: absolute;
+    text-indent: -12345px;
+    top: 3px;
+    right: 10px;
+    width: 18px;
+}
+
+.sidebar-status {
+    position: relative;
+    padding: 0;
+    margin: -3px 0 0 0;
+}
+
+.sidebar-status a {
+    color: #039 !important;
+}
+
+#profile-snapshot .sidebar-status p {
+    font-weight: normal;
+    line-height: 1.1;
+    margin: 0 0 8px;
+    padding: 0;
+    text-align: left;
+    cursor: text;
+    color: #000 !important;
+    overflow: hidden;
+    _width: 100%;
+}
+
+.sidebar-status .status-date {
+    color: #666;
+}
+
+.sidebar-status .comments {
+    white-space: nowrap;
+}
+
+.status-dialog {
+    width: 359px;
+    border: 0 !important;
+    display: none;
+    background-color: transparent !important;
+}
+
+.status-dialog input, .status-dialog form {
+    margin: 0;
+    padding: 0;
+}
+
+.status-dialog .status-head:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.status-dialog .status-head {
+    background-repeat: no-repeat;
+    padding: 0 9px 0 12px;
+    _height: 0;
+}
+
+.status-dialog .status-foot {
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    width: 359px;
+    height: 23px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.default-status-list {
+    border: 1px solid #666;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    top: 39px;
+    left: 0;
+    display: none;
+    width: 320px;
+}
+
+.default-status-list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.default-status-list li {
+    padding: 3px 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.default-status-list li:hover {
+    background: #ccc;
+}
+
+.js .status-edit {
+    display: none;
+}
+
+.js .status-close {
+    display: block !important;
+}
+
+.tabs {
+    height: 26px;
+    background: url(http://static01.linkedin.com/img/bg/bg_sprites_tabs.png) 0 3px repeat-x;
+    margin-bottom: 10px;
+}
+
+.tabs ul {
+    font-size: 85%;
+    height: 26px;
+    margin: 0 0 0 17px;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.tabs li, .tabs li a, .tabs li strong {
+    display: block;
+    float: left;
+}
+
+.tabs li {
+    background: url(http://static01.linkedin.com/img/bg/bg_sprites_tabs.png) 0 -47px no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.tabs li.selected {
+    background: #FFF url(http://static01.linkedin.com/img/bg/bg_sprites_tabs.png) 0 -100px no-repeat;
+    border-top: 1px solid #CCC;
+}
+
+.tabs li a {
+    color: #777;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tabs li.selected a, .tabs li.selected strong {
+    color: #C60;
+    background: url(http://static01.linkedin.com/img/bg/bg_sprites_tabs.png) 100% -100px no-repeat;
+}
+
+.tabs li.disabled a, .tabs li.disabled a:hover *, .tabs li.disabled strong {
+    color: #ccc;
+    cursor: text;
+}
+
+.tabs li strong {
+    color: #777;
+    background: url(http://static01.linkedin.com/img/bg/bg_sprites_tabs.png) 100% -47px no-repeat;
+    padding: 8px 14px 6px 14px;
+}
+
+.tabs li em {
+    color: #777;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.tabs li.selected strong {
+    color: #C60;
+    padding: 7px 14px 6px 14px;
+}
+
+.tabs li .beta {
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.tabs li a:hover, .tabs li a:hover * {
+    color: #39C;
+    text-decoration: none !important;
+}
+
+.tabs li.selected a:hover, .tabs li.selected a:hover * {
+    color: #C60;
+}
+
+.tabs p {
+    text-align: right;
+    margin: -18px 9px 0 0;
+    padding: 0;
+    font-size: 85%;
+}
+
+.tabs p a {
+    color: #777;
+}
+
+#feedback-dialog {
+    display: none;
+}
+
+#feedback-form-panel p {
+    font-size: 13px;
+    margin: 0 0 12px 0;
+    padding: 0;
+}
+
+#feedback-form-panel ul {
+    margin: 0;
+    padding: 0;
+}
+
+#feedback-form-panel li {
+    margin: 15px 0 0 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+#feedback-form-panel li label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 3px;
+    color: #333;
+    text-align: left;
+    padding: 0;
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+#feedback-form-panel li input {
+    width: 450px;
+    font-size: 13px;
+}
+
+#feedback-form-panel li input.btn-primary {
+    width: auto;
+}
+
+#feedback-form-panel li textarea {
+    height: 130px;
+    width: 450px;
+    font-size: 13px;
+    margin: 0;
+}
+
+#feedback-dialog .help {
+    padding: 15px 0 0 0;
+    color: #666;
+    font-size: 11px;
+}
+
+#feedback-dialog #wizard {
+    display: block;
+    float: right;
+    width: 100px;
+    margin: 0 0 10px 10px;
+    height: 95px;
+}
+
+#feedback-confirmation-panel p.disclaimer {
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.ad-block {
+    clear: both;
+    text-align: center;
+}
+
+.ad-block .title * {
+    text-indent: -12345px;
+}
+
+.ad-block .content {
+    position: relative;
+    z-index: 2;
+}
+
+#sidebar .ad-block .content embed {
+    width: 100% !important;
+}
+
+.ad-block.h-730x90 {
+    padding: 20px 0 5px;
+    border-top: 1px solid #ddd;
+    height: 1%;
+    font-size: 13px;
+}
+
+.ad-load {
+    display: none;
+}
+
+.textad p a:link, .textad p a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+.textad p a:link u {
+    color: #039;
+}
+
+.textad p a:visited u {
+    color: #339;
+}
+
+.ad-answers {
+    background: #DDF0F7 url(http://static02.linkedin.com/img/bg/bg_trans_bot_300x7.gif) 0 100% no-repeat;
+    margin: 0 auto 3px;
+    text-align: center;
+    width: 300px;
+}
+
+.ad-answers-in {
+    background: url(http://static03.linkedin.com/img/bg/bg_trans_top_300x7.gif) no-repeat;
+    padding: 15px 14px;
+}
+
+.ad-answers a:link, .ad-answers a:visited {
+    text-decoration: none;
+}
+
+.ad-answers a:hover {
+    text-decoration: underline;
+}
+
+.ad-answers h3 {
+    color: #000;
+    font-size: 15px !important;
+    margin: 0;
+}
+
+.ad-answers h3 strong {
+    background: url(http://static01.linkedin.com/img/icon/icon_in_21x21.gif) no-repeat;
+    color: #069;
+    font-size: 110%;
+    padding: 3px 0 2px 28px;
+}
+
+.ad-answers.sponsored .question p {
+    background-image: url(http://static01.linkedin.com/img/icon/icon_q_grey_20x20.gif);
+}
+
+.ad-answers.sponsored .question .category {
+    background: 0;
+}
+
+.ad-answers.sponsored .sponsored-by {
+    color: #666;
+    font-size: 11px;
+    text-align: right;
+}
+
+.ad-answers.sponsored .sponsored-by img {
+    vertical-align: middle;
+}
+
+.ad-answers .thisweek .question-in {
+    padding: 15px 10px 40px 8px;
+    text-align: center;
+}
+
+.ad-answers .thisweek .question p {
+    background: none;
+    font-size: 12px;
+    padding: 0;
+}
+
+.ad-answers .thisweek .question h4 {
+    color: #000;
+    font-size: 16px;
+    margin: 0 0 5px;
+}
+
+.ad-answers .thisweek .question h5 {
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.ad-answers .thisweek .question .timeleft {
+    color: #666;
+    font-size: 11px;
+}
+
+.ad-answers .thisweek .btn a {
+    background: url(http://static02.linkedin.com/img/btn/btn_go_39x23.gif) no-repeat;
+    display: block;
+    height: 23px;
+    margin: 0 auto;
+    outline: none;
+    text-indent: -12345px;
+    width: 39px;
+}
+
+.mask {
+    -moz-opacity: .4;
+    opacity: .40;
+    filter: alpha( opacity = 40);
+
+background-color:
+    #000;
+}
+
+#os-permission-dialog {
+    border: 3px solid #CCC;
+    text-align: left;
+}
+
+#os-permission-dialog .hd {
+    background: #AAA;
+    border: 0;
+    text-align: center;
+    font-size: 110%;
+}
+
+#os-permission-dialog .bd {
+    padding: 10px 15px 5px 10px;
+}
+
+#os-permission-dialog .bd .permission {
+    background: url(http://static03.linkedin.com/img/icon/icon_lock_34x34.png) no-repeat;
+    padding-left: 45px;*
+
+height:
+    1%;
+}
+
+#os-permission-dialog .bd p {
+    color: #666;
+    font-size: 150%;
+}
+
+#os-permission-dialog .bd p.buttons {
+    font-size: 130%;
+    margin-top: 10px;
+}
+
+#os-permission-dialog .bd p.buttons input {
+    font-size: 90%;
+    margin-right: 5px;
+    vertical-align: middle;*
+
+overflow:visible;* padding:
+    3px 5px 2px;
+}
+
+.marketing-bubble {
+    background-color: #999;
+    padding: 1px 0;
+    position: absolute;
+    text-align: left;
+    z-index: 2;
+}
+
+.marketing-bubble .bubble-wrap {
+    position: relative;
+    background: #FFF url(http://static03.linkedin.com/img/sprite/sprite_marketing_bubble_v1.gif) repeat-x 0 -14px;
+    border: 1px solid #F6BE69;
+    margin: -2px 0 0 -1px;
+}
+
+.marketing-bubble h3 {
+    color: #C60;
+    margin: 4px 22px 2px 8px;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1.4;
+    white-space: normal;
+}
+
+.marketing-bubble .bubble-close-button {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: url(http://static03.linkedin.com/img/sprite/sprite_marketing_bubble_v1.gif) no-repeat 0 0;
+    cursor: pointer;
+}
+
+.marketing-bubble .bubble-body {
+    padding: 0 8px 4px;
+}
+
+.marketing-bubble p.bubble-content {
+    margin: 0;
+    white-space: normal;
+    font-size: 11px;
+}
+
+.marketing-bubble span.new-feature {
+    color: #FFF;
+    background-color: #C60;
+    padding: 1px 3px;
+    margin-right: 2px;
+    -moz-border-radius: 1px;
+    font-weight: normal;
+    position: relative;
+    top: -1px;
+    font-size: 9px;
+}
+
+.marketing-bubble span.next-bubble {
+    cursor: pointer;
+    margin-left: 8px;
+    color: #039;
+}
+
+.marketing-bubble .bubble-arrow {
+    position: absolute;
+    background: url(http://static03.linkedin.com/img/sprite/sprite_marketing_bubble_v1.gif) no-repeat -100px -100px;
+    height: 12px;
+    width: 7px;
+    _font-size: 6px;
+}
+
+.hover-next span.next-bubble {
+    color: #FFF;
+    background-color: #f6b94b;
+}
+
+.bubble-hidden {
+    display: none;
+}
+
+.bubble-pos-left .bubble-arrow {
+    background-position: -26px -2px;
+    top: 4px;
+    left: -7px;
+}
+
+.bubble-pos-right .bubble-arrow {
+    background-position: -32px -2px;
+    top: 4px;
+    right: -7px;
+}
+
+.bubble-pos-top .bubble-arrow {
+    background-position: -14px 0;
+    height: 7px;
+    width: 12px;
+    top: -7px;
+    left: 2px;
+}
+
+.bubble-pos-bottom .bubble-arrow {
+    background-position: -14px -7px;
+    height: 7px;
+    width: 12px;
+    bottom: -7px;
+    left: 30px;
+}
+
+p.check-textarea-error {
+    display: block;
+    margin: 2px 0 !important;
+    background: url(http://static02.linkedin.com/img/sprite/sprite_globalnav_v6.png) 0 -672px no-repeat;
+    padding: 2px 0 2px 15px !important;
+    font-size: 11px !important;
+    color: #900 !important;
+}
+
+p.check-textarea-error strong {
+    font-weight: bold;
+}
+
+p.check-textarea-message {
+    display: block;
+    margin: 2px 0 !important;
+    padding: 2px 0 !important;
+    font-size: 11px !important;
+    color: #666 !important;
+}
+
+p.check-textarea-message strong {
+    font-weight: bold;
+}
+
+/* css/chrome.css */
+html {
+    background-color: #f7f7f7;
+}
+
+body {
+    background-color: #e6e6e6;
+}
+
+#header {
+    clear: both;
+    background-color: #fff;
+    border-bottom: 3px solid #CCCCCC;
+	height: 65px;
+}
+
+#body {
+    clear: both;
+    width: 98em;
+    min-width: 980px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 15px 10px 10px;
+}
+
+#sidebar {
+    width: 15.75%;
+    float: left;
+}
+
+#body .wrapper {
+    width: 79.5%;
+    float: right;
+    background-color: #fff;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-width: 1px;
+	background-color: #FFFFFF;
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 2px;
+    float: right;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 68.5%;
+}
+
+#footer {
+background-color:#F7F7F7;
+border-top:3px solid #CCCCCC;
+clear:both;
+color:#666666;
+height:1%;
+margin:15px 0 0;
+padding:20px 10px;
+}
+
+#footer .wrapper {
+margin:0 auto;
+max-width:98em;
+min-width:710px;
+}
+
+p#terms-of-use {
+margin:0.3em 0 1.2em;
+}
+
+#footer p {
+font-size:110%;
+margin:0;
+padding:0;
+}
+
+#nav-footer ul li:first-child, #nav-footer ul li.first {
+border:medium none;
+}
+
+#nav-footer ul li {
+border-left:1px solid #999999;
+display:inline;
+font-size:100%;
+font-weight:normal;
+line-height:1.1;
+margin:0;
+padding:0 0.4em 0 0.65em;
+}
+
+#nav-footer ul {
+list-style-type:none;
+margin:-1.2em 0 0;
+padding:0 0 0 6.5em;
+}
+
+ol, ul {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+}
+
+#footer p {
+font-size:110%;
+margin:0;
+padding:0;
+}
+
+#copyright, #nav-legal {
+display:inline;
+margin:0 1em;
+padding:0;
+}
+
+#header:after, #body:after, #body .wrapper:after, #main:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.member #header {
+    padding-bottom: 0 !important;
+    background: #fff url(http://static01.linkedin.com/img/bg/bg_grey_dotted_h-line_3x1.png) 0 52px repeat-x !important;
+}
+
+.guest #header {
+    background-image: none !important;
+    border-bottom: 3px solid #52a9d4 !important;
+    padding: 10px 10px !important;
+}
+
+#header .wrapper {
+    min-width: 760px;
+    max-width: 98em;
+    width: 98em;
+    margin: 0 auto;
+}
+
+#header h1 { *
+
+width:
+    119px;
+
+font-size:
+    100%;
+
+margin:
+    0;
+
+padding:
+    0;
+
+border:none;
+}
+
+.es.guest #header h1 {
+    background-position: 130px 16px;
+}
+
+#header h1#logo img {
+    width: 11.9em;*
+
+width:
+    119px;
+
+height:
+    3.2em;
+
+border:none;
+}
+
+/* MY CSS */
+#main_content {
+    float: left;
+    margin-bottom: 15px;
+    width: 60%;
+    font-size: 1.23em;
+    font: Arial;
+}
+
+#main_content a {
+}
+
+#main_content .author {
+    color: #6F6F6F;
+}
+
+#main_content .date {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+#main_extra {
+    /*display: block;*/
+    float: left;
+    padding: 0 0 10px 15px;
+    width: 35%;
+    font-size: 1.23em;
+    font: Arial;
+}
+
+#news_item {
+    display: block;
+    padding: 7px 15px 0px 15px;
+}
+
+#news_block {
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    background: #F7F7F7 none repeat scroll 0 0;
+    padding: 15px;
+	margin-bottom: 10px;
+}
+
+#news_block2 {
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    background: #FFF none repeat scroll 0 0;
+	margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    padding:10px 0 0 10px;
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#F7F7F7 none repeat scroll 0 0;
+}
+
+#body {
+    clear: both;
+    margin: 0 auto;
+    max-width: 95%;
+    min-width: 980px;
+    padding: 15px 10px 10px;
+    width: 115em;
+}
+
+#sidebar {
+    float: left;
+    width: 27.75%;
+}
+
+li.sidebar_item, li.cat-item {
+    font-size: 12px;
+	padding: 0 10px;
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0 0 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #003399;
+}
+
+a:visited {
+    color: #003399;
+}
+
+#header h1 {
+    border: medium none;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
+    padding:5px 100px;
+    color: #000000;
+}
+
+#header h1 a, hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+#capital_block {
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+#source {
+    font-weight: bold;
+    font-size: 85%;
+}
+
+#sidebar {
+    float: left;
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#FFFFFF none repeat scroll 0 0;
+	border:2px solid #CCCCCC;
+	float:left;
+	padding:10px;
+	width:25.75%;
+}
+
+#body {
+    clear: both;
+    margin: 0 auto;
+    max-width: 95%;
+    min-width: 980px;
+    padding: 15px 10px 10px;
+    width: 115em;
+}
+
+.member #header {
+    -moz-background-clip: border !important;
+    -moz-background-inline-policy: continuous !important;
+    -moz-background-origin: padding !important;
+    background: #FFFFFF url(http://static01.linkedin.com/img/bg/bg_grey_dotted_h-line_3x1.png) repeat-x scroll 0 52px !important;
+    padding-bottom: 0 !important;
+}
+
+body {
+    -x-system-font: none;
+    color: #000000;
+    font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    font-size: 62.5%;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    background-color: #E6E6E6;
+}
+
+html {
+    background-color: #F7F7F7;
+}
+
+html {
+    margin: 0;
+    overflow-y: scroll;
+    padding: 0;
+}
+
+#interior_block {
+    padding-top: 10px;
+}
+
+#box_tooltips {
+	background: #E6E6E6;
+	padding: 10px;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+h4 {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#F7F7F7 none repeat scroll 0 0;
+	font-size:14px;
+	font-weight:bold;
+	margin:6px 0 10px;
+	padding:6px 0 6px 6px;
+}
+
+#index_explica {
+	padding:0 0 20px 10px;
+}
+
+#crimeheader {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#F7F7F7 none repeat scroll 0 0;
+	
+}
+
+#crimedesc {
+	font-size: 12px;
+	margin:0 0 10px;
+	padding:0 0 10px 29px;	
+}
+
+#logo {
+	height:45px;
+	width: 40%;
+	float:left;
+	padding:10px 130px;
+}
+
+#logolinks {
+	font-size:17px;
+	font-weight:bold;
+	padding-top:25px;
+}
+
+#item_header {
+	display:inline;
+	padding:0 20px;
+	font-size:18px;
+}
+
+#updates {
+	margin:0 0 5px;
+	padding:0 0;
+	text-align:right;
+}
+
+#single {
+	padding:10px 0 10px 10px;
+	margin:0 0 10px;
+}
+
+p {
+	margin: 0 0 5px;
+}
+
+#nav-footer {
+clear:both;
+list-style-type:none;
+margin:0 0 12px;
+padding:0;
+}
+
+#copyright, #nav-legal {
+display:inline;
+margin:0 1em;
+padding:0;
+}
+
+#footer p {
+font-size:110%;
+margin:0;
+padding:0;
+}
+
+#nav-footer li {
+font-size:130%;
+font-weight:bold;
+margin:0 0 0.5em;
+padding:0;
+white-space:nowrap;
+}
+
+#state_tooltip {
+	font-size:20px;
+}
+
+#title_state_tooltip {
+	font-size:20px;
+}
+
+h5 {
+	font-size: 15px;
+	font-weight:bold;
+	padding:10px 0;
+}
+
+#comments {
+	padding-top: 100px;
+}
+
+#crime_sidebar {
+	font-wight: bold;
+}
+
+#graph {
+	padding: 10px;
+}
