@@ -249,17 +249,41 @@ echo '
 &amp;chl=Capital ('.$porc_cap1.'%)|GrandeSP ('.$porc_gsp1.'%)|Interior ('.$porc_int1.'%)" alt="x" />';
 }
 
-function crime($id_cr) {
+function crime($info, $id_cr) {
 
 	$crimes = mysql_query("SELECT * FROM table_macondo_crimes WHERE num_crime='$id_cr'")
 		or die (mysql_error());
 
 	while ($rows = mysql_fetch_object($crimes))
 		{
-			echo $rows->crime;
+			$crime_id = $rows->id;
+			$crime_code = $rows->crime_num_crime;
+			$crime_name = $rows->crime;
+			$crime_source = $rows->fonte;
+			$crime_definition = $rows->def_crime;
+			$crime_item = $rows->item_crime;
 		}
 
-
+		switch ($info) {
+    case 'id':
+        return $crime_id;
+        break;
+    case 'code':
+        return $crime_code;
+        break;
+    case 'name':
+        return $crime_name;
+        break;
+    case 'source':
+        return $crime_source;
+        break;
+    case 'definition':
+        return $crime_definition;
+        break;
+    case 'item':
+        return $crime_item;
+        break;
+	}
 
 }
 

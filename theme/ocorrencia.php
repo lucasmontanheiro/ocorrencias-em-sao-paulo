@@ -1,6 +1,6 @@
 <?php 
 include ('theme/database.php');
-include ('theme/functions.php');
+//include ('theme/functions.php');
 $id_cr = $_GET['cr'];
 include ('includes/crime_name.inc');
 include ('includes/header.inc');
@@ -8,17 +8,8 @@ include ('includes/sidebar1.inc');
 
 echo '<div class="wrapper">';
 echo '	<div id="capital_block">
-			<div id="crimeheader"><h2>';
-
-			crime($id_cr);
-
-			echo '</h2>
-				<div id="crimedesc">';
-
-CrimeDescription($id_cr);
-
-echo '			
-				</div>
+			<div id="crimeheader"><h2>'.crime('name', $id_cr).'</h2>
+				<div id="crimedesc">'.crime('definition', $id_cr).'</div>
 			</div>
 			<div id="main_content">
 			<div id="news_block">

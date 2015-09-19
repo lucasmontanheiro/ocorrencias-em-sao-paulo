@@ -1,4 +1,5 @@
 <?php
+
 $cr = 0;
 include ('theme/database.php');
 include ('theme/functions.php');
