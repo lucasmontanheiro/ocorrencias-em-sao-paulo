@@ -1,5 +1,5 @@
 <?php 
-$id_cr = $_GET['cr'];
+$crime_code = $_GET['cr'];
 include ('theme/database.php');
 include ('theme/functions.php');
 include ('includes/header.inc');
@@ -7,29 +7,42 @@ include ('includes/sidebar1.inc');
 
 echo '<div class="wrapper">';
 echo '	<div id="capital_block">
-			<div id="crimeheader"><h2>'.crime('name', $id_cr).'</h2>
-				<div id="crimedesc">'.crime('definition', $id_cr).'</div>
+			<div id="crimeheader"><h2>'.crime('name', $crime_code).'</h2>
+				<div id="crimedesc">'.crime('definition', $crime_code).'</div>
 			</div>
 			<div id="main_content">
 			<div id="news_block">
 				<span class="date">Breve Análise</span><br/>
 				<div id="news_item">';
-				CrimeAnalise($id_cr);
+				CrimeAnalise($crime_code);
 
 echo '</div></div>
 <div id="news_block2">';
 				
 echo '<h4 id="crime_sidebar">Ocorrências na Capital (por ano)</h4>
-<img width="11" height="11" src="'.$url.'/images/blue_graph.JPG"> Ano incompleto </br>';
-bar_graph("Capital", $chart_title, '1', $id_cr);
+<img width="11" height="11" src="images/blue_graph.JPG"> Ano incompleto </br>';
+
+bar_graph("Capital", $chart_title, $crime_code, "capital");
 
 echo '<h4 id="crime_sidebar">Ocorrências no Interior de São Paulo (por ano)</h4>
-<img width="11" height="11" src="'.$url.'/images/blue_graph.JPG"> Ano incompleto </br>';
-bar_graph("Interior", $chart_title, '3', $id_cr);
+<img width="11" height="11" src="images/blue_graph.JPG"> Ano incompleto </br>';
+
+bar_graph("Interior", $chart_title, $crime_code, "interior");
 
 echo '<h4 id="crime_sidebar">Ocorrências no Estado de São Paulo (por ano)</h4>
-<img width="11" height="11" src="'.$url.'/images/blue_graph.JPG"> Ano incompleto </br>';
-bar_graph("Estado", $chart_title, '13', $id_cr);
+<img width="11" height="11" src="images/blue_graph.JPG"> Ano incompleto </br>';
+
+bar_graph("Estado", $chart_title, $crime_code, "estado");
+
+echo '<h4 id="crime_sidebar">Ocorrências no deinter1 por ano</h4>
+<img width="11" height="11" src="images/blue_graph.JPG"> Ano incompleto </br>';
+
+bar_graph("deinter1", $chart_title, $crime_code, "deinter1");
+
+
+
+
+
 
 echo '</div><div id="news_block2">';
 echo '
