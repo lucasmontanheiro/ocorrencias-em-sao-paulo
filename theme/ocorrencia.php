@@ -1,10 +1,9 @@
 <?php 
-include ('theme/database.php');
-//include ('theme/functions.php');
 $id_cr = $_GET['cr'];
-include ('includes/crime_name.inc');
+include ('theme/database.php');
+include ('theme/functions.php');
 include ('includes/header.inc');
-include ('includes/sidebar1.inc');
+include ('includes/sidebar1.inc'); 
 
 echo '<div class="wrapper">';
 echo '	<div id="capital_block">
@@ -22,15 +21,15 @@ echo '</div></div>
 				
 echo '<h4 id="crime_sidebar">Ocorrências na Capital (por ano)</h4>
 <img width="11" height="11" src="'.$url.'/images/blue_graph.JPG"> Ano incompleto </br>';
-Grafico("Capital", $chart_title, '1', $id_cr);
+bar_graph("Capital", $chart_title, '1', $id_cr);
 
 echo '<h4 id="crime_sidebar">Ocorrências no Interior de São Paulo (por ano)</h4>
 <img width="11" height="11" src="'.$url.'/images/blue_graph.JPG"> Ano incompleto </br>';
-Grafico("Interior", $chart_title, '3', $id_cr);
+bar_graph("Interior", $chart_title, '3', $id_cr);
 
 echo '<h4 id="crime_sidebar">Ocorrências no Estado de São Paulo (por ano)</h4>
 <img width="11" height="11" src="'.$url.'/images/blue_graph.JPG"> Ano incompleto </br>';
-Grafico("Estado", $chart_title, '13', $id_cr);
+bar_graph("Estado", $chart_title, '13', $id_cr);
 
 echo '</div><div id="news_block2">';
 echo '

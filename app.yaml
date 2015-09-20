@@ -22,3 +22,6 @@ handlers:
 
 - url: /ocorrencia.php
   script: theme/ocorrencia.php
+
+- url: /sobre.php
+  script: theme/sobre.php  

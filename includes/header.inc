@@ -1,16 +1,15 @@
 <?php
-include ('theme/database.php');
-include ('theme/functions.php');
 
 //composing the title
 if ($cr !== 0) { $title = $cr.' | '; }
 else { $title = ''; }
 
+$url = "http://$_SERVER[HTTP_HOST]";
+
 echo '<?xml version="1.0" encoding="UTF-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	'.$block.'
-	<title>'.crime('name', $id_cr).'Ocorrências em São Paulo</title>
+	<title>'.crime('name', $id_cr).' - Ocorrências em São Paulo</title>
 	<meta name="description" content="Estatísticas autalizadas sobre ocorrências e crimes no Estado de São Paulo.">
 	<meta name="keywords" content="'.crime('name', $id_cr).', estatísticas criminais, estatísticas crimes, crimes são paulo, ocorrências">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />

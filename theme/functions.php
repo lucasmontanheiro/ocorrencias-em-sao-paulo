@@ -6,99 +6,13 @@ function stripAccents($string){
 return strtr($string,' ï¿½ï¿½aaaceeeeï¿½iiinï¿½ooooï¿½uuuyyAAAAACï¿½EEEIIIINOOOOOUUUUYï¿½',
  '+aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUYc ');
  }
- 
-function Grafico($title_graph , $chart_title, $data_graph2, $cr ) {
-
-	$allmatches = mysql_query("SELECT substr(periodo,1,4) AS periodo, 
-				sum(data_capital) AS data_capital, 
-				sum(data_grandesp) AS data_grandesp, 
-				sum(data_interior) AS data_interior, 
-				sum(data_deinter1) AS data_deinter1, 
-				sum(data_deinter2) AS data_deinter2, 
-				sum(data_deinter3) AS data_deinter3, 
-				sum(data_deinter4) AS data_deinter4, 
-				sum(data_deinter5) AS data_deinter5, 
-				sum(data_deinter6) AS data_deinter6, 
-				sum(data_deinter7) AS data_deinter7, 
-				sum(data_deinter8) AS data_deinter8, 
-				sum(data_deinter9) AS data_deinter9, 
-				sum(data_estado) AS data_estado
-					FROM table_macondo 
-					WHERE ocorrencia=$cr 
-					GROUP BY substr(periodo,1,4) 
-					ORDER BY periodo ASC") 
-		or die (mysql_error());
-
-			$i = 0;
-			
-			while ($rows = mysql_fetch_object($allmatches))
-			{
-			$dados = array(	$rows->data_capital,
-							$rows->data_grandesp,
-							$rows->data_interior,
-							$rows->data_deinter1,
-							$rows->data_deinter2,
-							$rows->data_deinter3,
-							$rows->data_deinter4,
-							$rows->data_deinter5,
-							$rows->data_deinter6,
-							$rows->data_deinter7,
-							$rows->data_deinter8,
-							$rows->data_deinter9,
-							$rows->data_estado);
-				$i++;
-				$data_graph_year[$i] = $dados[$data_graph2 - 1];
-			}
-
-			// This portion is all about the range of the graphs
-			$series = array(
-					$data_graph_year[0], 
-					$data_graph_year[1], 
-					$data_graph_year[2], 
-					$data_graph_year[3], 
-					$data_graph_year[4],
-					$data_graph_year[5],
-					);
-			sort($series);
-			$graph_range = $series[sizeof($series)-1];
-
-			echo $graph_range;
-
-$i = 5;
-
-echo '<img src="http://chart.apis.google.com/chart?chs=300x125&chbh=30,10';
-echo '&chco=76A4FB|76A4FB|76A4FB|76A4FB|76A4FB|224499&chxt=x,y,r,x&chds=0,'.$graph_range.'&chd=t:';
-				for ( $j=1; ($j<=$i) ; $j++ ) {
-				echo $data_graph_year[$j];
-				if ($j<=($i-1)) {
-				echo ',';
-				}
-				}	
-				echo 
-'&cht=bvs&chxl=0:|2005|2006|2007|2008|2009|2010|3:|';
-				for ( $j=1; ($j<=$i) ; $j++ ) {
-				echo $data_graph_year[$j];
-				if ($j!=$i) {
-				echo '|';
-				}
-				}
-echo '" alt="Capital" />';
-
-				for ( $j=1; ($j<=$i) ; $j++ ) {
-				echo $data_graph_year[$j];
-				if ($j<=($i-1)) {
-				echo ',';
-					}
-				}	
-
-}
 
 /* 	FUNCTION YEAR OVER YEAR ATUALIZADA
 */
 
 function YoY( $data_graph2, $cr, $ant, $pos ) {
 
-			$allmatches = mysql_query("SELECT substr(periodo,1,4) AS periodo, 
+			$allmatches = mysql_query("SELECT substr(periodo_year,1,4) AS periodo, 
 										sum(data_capital) AS data_capital, 
 										sum(data_grandesp) AS data_grandesp, 
 										sum(data_interior) AS data_interior, 
@@ -114,7 +28,7 @@ function YoY( $data_graph2, $cr, $ant, $pos ) {
 										sum(data_estado) AS data_estado
 											FROM table_macondo 
 											WHERE ocorrencia='$cr' 
-											GROUP BY substr(periodo,1,4) 
+											GROUP BY substr(periodo_year,1,4) 
 											ORDER BY periodo ASC")
 			or die (mysql_error());
 
@@ -247,59 +161,6 @@ chs=300x100
 echo '
 &amp;cht=p
 &amp;chl=Capital ('.$porc_cap1.'%)|GrandeSP ('.$porc_gsp1.'%)|Interior ('.$porc_int1.'%)" alt="x" />';
-}
-
-function crime($info, $id_cr) {
-
-	$crimes = mysql_query("SELECT * FROM table_macondo_crimes WHERE num_crime='$id_cr'")
-		or die (mysql_error());
-
-	while ($rows = mysql_fetch_object($crimes))
-		{
-			$crime_id = $rows->id;
-			$crime_code = $rows->crime_num_crime;
-			$crime_name = $rows->crime;
-			$crime_source = $rows->fonte;
-			$crime_definition = $rows->def_crime;
-			$crime_item = $rows->item_crime;
-		}
-
-		switch ($info) {
-    case 'id':
-        return $crime_id;
-        break;
-    case 'code':
-        return $crime_code;
-        break;
-    case 'name':
-        return $crime_name;
-        break;
-    case 'source':
-        return $crime_source;
-        break;
-    case 'definition':
-        return $crime_definition;
-        break;
-    case 'item':
-        return $crime_item;
-        break;
-	}
-
-}
-
-
-function CrimeDescription($id_cr) {
-
-$loadcrimedesc = mysql_query("SELECT * FROM table_macondo_crimes WHERE num_crime='$id_cr'")
-			or die (mysql_error());
-
-			$count = 0;
-			while ($rowsfilter = mysql_fetch_object($loadcrimedesc))
-			{
-				$count++;
-				$crimedescription = $rowsfilter->def_crime;
-			}
-echo $crimedescription;
 }
 
 function CrimeLinks($id_cr , $cap_int) {

@@ -21,5 +21,7 @@ echo '
 			</div>
 		</div>
 	</div>';
+
 	include ('includes/footer.inc');
+	
 ?>
