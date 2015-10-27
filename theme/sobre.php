@@ -10,13 +10,13 @@ echo '
 			<div id="main_content">
 				<h2 id="single">Sobre</h2>
 				<div id="updates">
-					<span class="author">Última atualização</span> - <span class="date">14 de novembro de 2009</span>
+					<span class="author">Ãšltima atualizaÃ§Ã£o</span> - <span class="date">14 de novembro de 2009</span>
 				</div>
-				<p>O \'Ocorrências em São Paulo\' é dedicado a apresentar aos cidadãos os números relativos a ocorrências policiais divulgados pela Secretaria de Segurança Pública de São Paulo (SSP-SP) de forma inteligível e interativa.</p>
-				<p>Atualmente entre as principais preocupações dos cidadãos paulistas estão os crimes e, conseqüentemente, como a polícia e o governo vêm trabalhando para contornar os problemas relativos à criminalidade. Este trabalho pretende disponibilizar de uma forma clara a evolução destas ocorrências, assim como as análises que a equipe da Secretaria de Segurança Pública de São Paulo produz nos relatórios trimestrais através de seu Website.</p>
+				<p>O \'OcorrÃªncias em SÃ£o Paulo\' Ã© dedicado a apresentar aos cidadÃ£os os nÃºmeros relativos a ocorrÃªncias policiais divulgados pela Secretaria de SeguranÃ§a PÃºblica de SÃ£o Paulo (SSP-SP) de forma inteligÃ­vel e interativa.</p>
+				<p>Atualmente entre as principais preocupaÃ§Ãµes dos cidadÃ£os paulistas estÃ£o os crimes e, conseqÃ¼entemente, como a polÃ­cia e o governo vÃªm trabalhando para contornar os problemas relativos Ã  criminalidade. Este trabalho pretende disponibilizar de uma forma clara a evoluÃ§Ã£o destas ocorrÃªncias, assim como as anÃ¡lises que a equipe da Secretaria de SeguranÃ§a PÃºblica de SÃ£o Paulo produz nos relatÃ³rios trimestrais atravÃ©s de seu Website.</p>
 			</div>
 			<div id="main_extra">
-				<h3>Links Úteis</h3>
+				<h3>Links Ãšteis</h3>
 				<strong>Em breve</strong>
 			</div>
 		</div>
