@@ -825,7 +825,7 @@ body {
     clear: both;
     background-color: #fff;
     border-bottom: 3px solid #CCCCCC;
-	height: 65px;
+	height: 85px;
 }
 
 #body {
@@ -1202,13 +1202,14 @@ h4 {
 	height:45px;
 	width: 40%;
 	float:left;
-	padding:10px 130px;
+	padding: 10px 0px;
 }
 
 #logolinks {
 	font-size:17px;
 	font-weight:bold;
-	padding-top:25px;
+	padding-top:15px;
+    float: right;
 }
 
 #item_header {
@@ -1285,4 +1286,16 @@ h5 {
 
 #graph {
 	padding: 10px;
+}
+
+#header_block {
+
+    clear: both;
+    margin: 0 auto;
+    max-width: 95%;
+    min-width: 980px;
+    padding: 15px 10px 10px;
+    width: 115em;
+
+
 }

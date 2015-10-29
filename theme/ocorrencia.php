@@ -41,7 +41,8 @@ echo '<h4 id="crime_sidebar">Ocorrências no deinter1 por ano</h4>
 bar_graph("deinter1", $chart_title, $crime_code, "deinter1");
 
 echo "
-<script type=\"text/javascript\">
+<script type='text/javascript'>
+
 google.load('visualization', '1', {packages: ['corechart', 'bar']});
 google.setOnLoadCallback(drawBasic);
 
@@ -89,6 +90,7 @@ function drawBasic() {
 
 echo '
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  
   <div id="chart_div"></div>';
 
 

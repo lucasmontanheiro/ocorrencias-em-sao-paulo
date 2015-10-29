@@ -31,17 +31,21 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 
 <body class="yui-skin-sam">
 <div id="header">
-<div id="logo"><a href="/"><img src="images/logo.jpg"/></a></div>
-<div id="logolinks">
-<div id="item_header"><a href="/">Início</a></div>
-<div id="item_header"><a href="sobre.php">Sobre</a></div>
-<div id="item_header">
-	<a href="http://twitter.com/home?status=Ocorrencias+no+Estado+de+Sao+Paulo http://ocorrenciasemsaopaulo.com.br/"><img title="compartilhar via twitter" alt="compartilhar via twitter" src="images/twitter.png"/></a>
-	<a href="http://www.facebook.com/share.php?u=http://ocorrenciasemsaopaulo.com.br/"><img title="compartilhar via facebook" alt="compartilhar via facebook" src="images/facebook.png"/></a>
-	<a href="http://del.icio.us/login/?url=http://ocorrenciasemsaopaulo.com.br/&amp;title=Ocorrencias+no+Estado+de+Sao+Paulo"><img title="adicionar ao delicious" alt="delicious" src="images/delicious.png"/></a>
+
+<div id="header_block">
+	<div id="logo"><a href="/"><img src="images/logo.jpg"/></a></div>
+	<div id="logolinks">
+		<div id="item_header"><a href="/">Início</a></div>
+		<div id="item_header"><a href="sobre.php">Sobre</a></div>
+		<div id="item_header">
+			<a href="http://twitter.com/home?status=Ocorrencias+no+Estado+de+Sao+Paulo http://ocorrenciasemsaopaulo.com.br/"><img title="compartilhar via twitter" alt="compartilhar via twitter" src="images/twitter.png"/></a>
+			<a href="http://www.facebook.com/share.php?u=http://ocorrenciasemsaopaulo.com.br/"><img title="compartilhar via facebook" alt="compartilhar via facebook" src="images/facebook.png"/></a>
+			<a href="http://del.icio.us/login/?url=http://ocorrenciasemsaopaulo.com.br/&amp;title=Ocorrencias+no+Estado+de+Sao+Paulo"><img title="adicionar ao delicious" alt="delicious" src="images/delicious.png"/></a>
+		</div>
+	</div>
 </div>
 </div>
-</div>
+
 <body class="en member v2 active-user js" id="pagekey-home">
 <div timeout="1032" hidepaneltimeout="2805" id="body">';
 ?>
