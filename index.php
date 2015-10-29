@@ -3,8 +3,8 @@
 $cr = 0;
 include ('theme/database.php');
 include ('theme/functions.php');
-include ('includes/header.inc');
-include ('includes/sidebar1.inc'); 
+include ('theme/header.php');
+include ('theme/sidebar1.php'); 
 
 echo '
 <div class="wrapper">
@@ -30,6 +30,6 @@ echo '
 </div>
 </div>';
 
-include ('includes/footer.inc');
+include ('theme/footer.php');
 
 ?>

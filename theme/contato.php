@@ -1,6 +1,7 @@
 <?php
 include ('database.php');
 include ('functions.php');
+
 echo '<?xml version="1.0" encoding="iso-8859-1"?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -24,7 +25,9 @@ echo '<?xml version="1.0" encoding="iso-8859-1"?>
 </head>
 <body class="yui-skin-sam">
 	<div id="header">';
+
 include ('includes/header.inc');
+
 echo '
 <body class="en member v2 active-user js" id="pagekey-home">
   <div timeout="1032" hidepaneltimeout="2805" id="body">';
