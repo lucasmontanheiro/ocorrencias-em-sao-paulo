@@ -1,5 +1,77 @@
 <?php
 
+function column_graph($graph_title , $chart_title, $crime_code, $region) {
+
+	$allmatches = mysql_query("SELECT 
+		periodo_year,
+		periodo_quarter, 
+		".$region." AS region
+		FROM table_macondo 
+		WHERE ocorrencia=$crime_code
+		GROUP BY periodo_year
+		ORDER BY periodo_year ASC" )
+	or die (mysql_error());
+
+	$i = 0;
+	
+	while ($rows = mysql_fetch_object($allmatches))
+	{
+		$info[$i] = array (
+			"year" => $rows->periodo_year,
+			"quarter" => $rows->periodo_quarter,
+			"region" => $rows->region
+			);
+		$i++;
+	}
+
+
+
+echo '    
+	
+	<script type="text/javascript">
+      	google.load("visualization", "1.1", {packages:["bar"]});
+      	google.setOnLoadCallback(drawStuff);
+
+      	function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+
+			[\'Move\', \'Percentage\'],
+        	';
+          
+          	for ( $j=0; ($j<$i) ; $j++ ) {
+					
+				echo '["'.$info[$j]["year"].'", '.$info[$j]["region"].'],';
+					
+				}
+
+echo '
+        ]);
+
+        var options = {
+          title: \'Ocorrências na '.$graph_title.'\',
+          width: 750,
+          legend: { position: \'none\' },
+          chart: { subtitle: \'popularity by percentage\' },
+          axes: {
+            x: {
+              0: { side: \'top\', label: \'Ano\'} // Top x-axis.
+            }
+          },
+          bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById("top_x_div_'.$region.'"));
+        // Convert the Classic options to Material options.
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      };
+    </script>';
+
+echo '<div id="top_x_div_'.$region.'" style="width: 900px; height: 500px;"></div>';
+
+}
+
+
+
 //FUNCTIONS
 
 function stripAccents($string){

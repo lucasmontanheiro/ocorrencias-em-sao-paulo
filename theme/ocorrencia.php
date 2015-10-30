@@ -36,7 +36,9 @@ elseif ( $cr == 'Homicídio doloso') { echo '<h5>Estatísticas na cidade de São
 elseif ( $cr == 'Pessoas mortas em confronto com a polícia militar em serviço') { echo '<h5>Estatísticas na cidade de São Paulo</h5>Mortes por ação policial (%)'; MAP_CITY(35); }
 else { echo ''; }
 
+/*
 echo '
+
 <h4>Estatísticas no Estado de São Paulo</h4>
 
 <img src="images/mapa_estado_sp.gif" usemap="#estadosp" width="410" border="0" />
@@ -174,6 +176,8 @@ echo '
    });
 </script>
 </div></center>
+
+
 			</div>
 			
 			<div id="news_block">
@@ -206,7 +210,7 @@ echo '<h3>Dados do Estado</h3>';
 echo '<h4 id="crime_sidebar">Proporção de registros, por região</h4>';
 
 GraficoPizza($id_cr);
-
+*/
 echo '</div></div>';
 echo '</div></div></div></div></div>';
 include ('theme/footer.php');
