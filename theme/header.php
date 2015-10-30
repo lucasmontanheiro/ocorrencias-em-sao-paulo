@@ -26,7 +26,11 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 		<script type="text/javascript" src="//code.jquery.com/jquery-1.3.2.min.js"></script>
 		<script type="text/javascript" src="http://www.montanheiro.com.br/labs/buendia/js/jquery.qtip-1.0.0-rc3.js"></script>
 		<!-- qTIP ends -->
-		
+	
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+
+
 </head>
 
 <body class="yui-skin-sam">
