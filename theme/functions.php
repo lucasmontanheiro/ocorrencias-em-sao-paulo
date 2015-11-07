@@ -35,7 +35,7 @@ echo '
       	function drawStuff() {
         var data = new google.visualization.arrayToDataTable([
 
-			[\'Move\', \'Percentage\'],
+			[\'Ano\', \'Ocorrências\'],
         	';
           
           	for ( $j=0; ($j<$i) ; $j++ ) {
