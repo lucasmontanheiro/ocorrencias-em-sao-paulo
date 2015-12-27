@@ -29,16 +29,53 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 	
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+      google.load("visualization", "1.1", {packages:["table"]});
+      google.setOnLoadCallback(drawTable);
+
+      function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn(\'string\', \'Year\');
+        data.addColumn(\'number\', \'Salary\');
+        data.addColumn(\'boolean\', \'Full Time Employee\');
+        data.addRows([
+          [\'2005\',  {v: 10000, f: \'$10,000\'}, true],
+          [\'2006\',   {v:8000,   f: \'$8,000\'},  false],
+          [\'2007\', {v: 12500, f: \'$12,500\'}, true],
+          [\'2008\',   {v: 7000,  f: \'$7,000\'},  true]
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById(\'table_div1\'));
+
+        table.draw(data, {showRowNumber: true, width: \'100%\', height: \'200px\'});
+      }
+    </script>
 
 
 </head>
 
 <body class="yui-skin-sam">
+
+<div id="body_header">
+
 <div id="header">
 
-<div id="header_block">
-	<div id="logo"><a href="/"><img src="images/logo.jpg"/></a></div>
-	<div id="logolinks">
+<div class="col-lg-12">
+	<div class="col-lg-4">
+		<a href="/"><img src="images/logo.jpg"/></a>
+	</div>
+	<div class="col-lg-4"></div>
+	<div class="col-lg-4 vcenter">
 		<div id="item_header"><a href="/">Início</a></div>
 		<div id="item_header"><a href="sobre.php">Sobre</a></div>
 		<div id="item_header">
@@ -49,7 +86,12 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 	</div>
 </div>
 </div>
+</div>
 
-<body class="en member v2 active-user js" id="pagekey-home">
-<div timeout="1032" hidepaneltimeout="2805" id="body">';
+<!--<body class="en member v2 active-user js" id="pagekey-home">-->
+<div timeout="1032" hidepaneltimeout="2805" id="body">
+<div class="container-fluid">
+
+<div class="col-lg-12">
+';
 ?>

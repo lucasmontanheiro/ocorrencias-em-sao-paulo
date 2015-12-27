@@ -48,10 +48,8 @@ echo '
         ]);
 
         var options = {
-          title: \'Ocorrências na '.$graph_title.'\',
           width: 750,
           legend: { position: \'none\' },
-          chart: { subtitle: \'popularity by percentage\' },
           axes: {
             x: {
               0: { side: \'top\', label: \'Ano\'} // Top x-axis.
@@ -66,7 +64,7 @@ echo '
       };
     </script>';
 
-echo '<div id="top_x_div_'.$region.'" style="width: 900px; height: 500px;"></div>';
+echo '<div id="top_x_div_'.$region.'" style="width: 900px; height: 300px;"></div>';
 
 }
 
@@ -267,7 +265,7 @@ echo '</span></div>';
 
 function CrimeAnalise($id_cr) {
 
-$loadcrimedesc = mysql_query("SELECT * FROM table_macondo_analises WHERE id_crime='$id_cr'")
+$loadcrimedesc = mysql_query("SELECT * FROM ocorrencias_analises WHERE id_crime='$id_cr'")
 			or die (mysql_error());
 
 			while ($rowsfilter = mysql_fetch_object($loadcrimedesc))
@@ -328,5 +326,21 @@ echo 	'\',
 echo '</script>';
 
 }
+
+function listLinks($year, $crime_code){
+
+$alllinks = mysql_query("SELECT * FROM ocorrencias_links WHERE year='$year' AND id_crime='$crime_code'")
+			or die (mysql_error());
+
+			while ($links = mysql_fetch_object($alllinks))
+			{
+				$analise = "<a href='".$links->url_link."'>".$links->label_link."</a>";
+			}
+
+if ($analise == NULL) { echo 'Não há links.'; }
+else { echo $analise; }	
+
+}
+
 
 ?>

@@ -13,6 +13,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline;
 }
 
+body {
+    background: #E6E6E6 !important;
+}
+
 ol, ul {
     list-style: none;
 }
@@ -825,7 +829,8 @@ body {
     clear: both;
     background-color: #fff;
     border-bottom: 3px solid #CCCCCC;
-	height: 85px;
+	height: 75px;
+    padding: 15px;
 }
 
 #body {
@@ -843,7 +848,6 @@ body {
 }
 
 #body .wrapper {
-    width: 79.5%;
     float: right;
     background-color: #fff;
     padding: 15px;
@@ -856,7 +860,6 @@ body {
     float: right;
     margin-bottom: 10px;
     padding: 15px;
-    width: 68.5%;
 }
 
 #footer {
@@ -1297,5 +1300,26 @@ h5 {
     padding: 15px 10px 10px;
     width: 115em;
 
+}
 
+#top_x_div_data_capital {
+    margin-left: 5px;
+    margin-top: 30px;
+}
+
+h2 {
+    margin-top: 0px !important;
+}
+
+.wrapper.col-lg-9 {
+    height: 1700px !important;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+table.google-visualization-table-table {
+    height: 100px !important;
 }
