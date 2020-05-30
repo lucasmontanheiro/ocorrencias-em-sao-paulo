@@ -19,9 +19,3 @@ handlers:
 
 - url: /
   script: index.php
-
-- url: /ocorrencia.php
-  script: theme/ocorrencia.php
-
-- url: /sobre.php
-  script: theme/sobre.php  

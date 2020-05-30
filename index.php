@@ -3,8 +3,8 @@
 $cr = 0;
 // include ('theme/database.php');
 // include ('theme/functions.php');
-// include ('theme/header.php');
-// include ('theme/sidebar1.php'); 
+include ('theme/header.php');
+include ('theme/sidebar1.php'); 
 
 echo '
 <div class="wrapper col-lg-9">
