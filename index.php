@@ -1,10 +1,10 @@
 <?php
 
 $cr = 0;
-include ('theme/database.php');
-include ('theme/functions.php');
-include ('theme/header.php');
-include ('theme/sidebar1.php'); 
+// include ('theme/database.php');
+// include ('theme/functions.php');
+// include ('theme/header.php');
+// include ('theme/sidebar1.php'); 
 
 echo '
 <div class="wrapper col-lg-9">
@@ -24,6 +24,6 @@ echo '
 </div>
 </div>';
 
-include ('theme/footer.php');
+// include ('theme/footer.php');
 
 ?>
