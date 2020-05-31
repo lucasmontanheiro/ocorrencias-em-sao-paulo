@@ -1,1 +1,23 @@
 runtime: php55
+
+handlers:
+- url: /theme
+  static_dir: theme
+  application_readable: true
+  mime_type: text/html
+
+- url: /css
+  static_dir: css
+
+- url: /images
+  mime_type: image/png
+  static_dir: images
+
+- url: /
+  script: index.php
+
+- url: /ocorrencia.php
+  script: theme/ocorrencia.php
+
+- url: /sobre.php
+  script: theme/sobre.php

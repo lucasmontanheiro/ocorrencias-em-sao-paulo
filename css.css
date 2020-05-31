@@ -13,10 +13,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline;
 }
 
-body {
-    background: #E6E6E6 !important;
-}
-
 ol, ul {
     list-style: none;
 }
@@ -829,8 +825,7 @@ body {
     clear: both;
     background-color: #fff;
     border-bottom: 3px solid #CCCCCC;
-	height: 75px;
-    padding: 15px;
+	height: 65px;
 }
 
 #body {
@@ -848,6 +843,7 @@ body {
 }
 
 #body .wrapper {
+    width: 79.5%;
     float: right;
     background-color: #fff;
     padding: 15px;
@@ -857,9 +853,10 @@ body {
     border-color: #CCCCCC;
     border-style: solid;
     border-width: 2px;
+    float: right;
     margin-bottom: 10px;
     padding: 15px;
-    width: 65%;
+    width: 68.5%;
 }
 
 #footer {
@@ -1027,7 +1024,6 @@ border:none;
     background: #F7F7F7 none repeat scroll 0 0;
     padding: 15px;
 	margin-bottom: 10px;
-    width: 760px;
 }
 
 #news_block2 {
@@ -1041,7 +1037,7 @@ border:none;
 h2 {
     font-size: 20px;
     font-weight: bold;
-    padding:10px 0 10px 10px;
+    padding:10px 0 0 10px;
 	-moz-background-clip:border;
 	-moz-background-inline-policy:continuous;
 	-moz-background-origin:padding;
@@ -1205,14 +1201,13 @@ h4 {
 	height:45px;
 	width: 40%;
 	float:left;
-	padding: 10px 0px;
+	padding:10px 130px;
 }
 
 #logolinks {
 	font-size:17px;
 	font-weight:bold;
-	padding-top:15px;
-    float: right;
+	padding-top:25px;
 }
 
 #item_header {
@@ -1283,43 +1278,8 @@ h5 {
 
 #crime_sidebar {
 	font-wight: bold;
-    padding: 15px;
-    width: 760px;
 }
 
 #graph {
 	padding: 10px;
-}
-
-#header_block {
-
-    clear: both;
-    margin: 0 auto;
-    max-width: 95%;
-    min-width: 980px;
-    padding: 15px 10px 10px;
-    width: 115em;
-
-}
-
-#top_x_div_data_capital {
-    margin-left: 5px;
-    margin-top: 30px;
-}
-
-h2 {
-    margin-top: 0px !important;
-}
-
-.wrapper.col-lg-9 {
-    height: 1700px !important;
-}
-
-.vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-}
-table.google-visualization-table-table {
-    height: 100px !important;
 }
