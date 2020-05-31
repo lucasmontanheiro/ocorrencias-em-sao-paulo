@@ -1,7 +1,7 @@
 application: ocorrencias-em-sao-paulo
 version: 2
 runtime: php55
-api_version: 1
+api_version: 2
 threadsafe: true
 
 handlers:
