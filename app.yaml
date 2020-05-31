@@ -5,17 +5,5 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /theme
-  static_dir: theme
-  application_readable: true
-  mime_type: text/html
-
-- url: /css
-  static_dir: css
-
-- url: /images
-  mime_type: image/png
-  static_dir: images
-
-- url: /
+- url: .*
   script: index.php
