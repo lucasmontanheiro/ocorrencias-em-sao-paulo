@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatísticas Criminais - São Paulo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">
+                <i class="bi bi-shield-shaded me-2"></i>Estatísticas Criminais SP
+            </span>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+        <div class="row g-4">
+            <!-- Filtros -->
+            <div class="col-lg-3">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-white fw-bold">
+                        <i class="bi bi-filter me-2"></i>Filtros
+                    </div>
+                    <div class="card-body" id="filters-container">
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Tipo de Ocorrência</label>
+                            <select id="filter-tipo" class="form-select"></select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Região</label>
+                            <select id="filter-regiao" class="form-select">
+                                <option value="data_estado">Estado de São Paulo</option>
+                                <option value="data_capital">Capital</option>
+                                <option value="data_grandesp">Grande São Paulo</option>
+                                <option value="data_interior">Interior</option>
+                                <option value="data_deinter1">Deinter 1 (S. J. Campos)</option>
+                                <option value="data_deinter2">Deinter 2 (Campinas)</option>
+                                <option value="data_deinter3">Deinter 3 (Ribeirão Preto)</option>
+                                <option value="data_deinter4">Deinter 4 (Bauru)</option>
+                                <option value="data_deinter5">Deinter 5 (S. J. Rio Preto)</option>
+                                <option value="data_deinter6">Deinter 6 (Santos)</option>
+                                <option value="data_deinter7">Deinter 7 (Sorocaba)</option>
+                                <option value="data_deinter8">Deinter 8 (Pres. Prudente)</option>
+                                <option value="data_deinter9">Deinter 9 (Piracicaba)</option>
+                                <option value="data_deinter10">Deinter 10 (Araçatuba)</option>
+                                <option value="all">Todas as Regiões</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Tipo de Gráfico</label>
+                            <div class="btn-group w-100" role="group">
+                                <input type="radio" class="btn-check" name="chartType" id="btn-line" value="line" checked>
+                                <label class="btn btn-outline-primary" for="btn-line"><i class="bi bi-graph-up me-1"></i>Linhas</label>
+                                <input type="radio" class="btn-check" name="chartType" id="btn-bar" value="bar">
+                                <label class="btn btn-outline-primary" for="btn-bar"><i class="bi bi-bar-chart me-1"></i>Barras</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <button id="download-png" class="btn btn-dark w-100 mb-2">
+                        <i class="bi bi-image me-2"></i>Download PNG
+                    </button>
+                    <button id="download-pdf" class="btn btn-danger w-100">
+                        <i class="bi bi-file-earmark-pdf me-2"></i>Download PDF
+                    </button>
+                </div>
+                
+                <div class="mt-4 text-center">
+                    <a id="link-fonte" href="#" target="_blank" class="text-decoration-none small">
+                        <i class="bi bi-link-external me-1"></i>Fonte Oficial
+                    </a>
+                </div>
+            </div>
+
+            <!-- Conteúdo Principal -->
+            <div class="col-lg-9">
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-body">
+                        <div id="chart-container" style="position: relative; height:400px; width:100%">
+                            <canvas id="mainChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-white fw-bold d-flex justify-content-between align-items-center">
+                        <span>Tabela Resumo</span>
+                        <span id="loading-badge" class="badge bg-primary">Carregando dados...</span>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0" id="data-table">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Ano/Trimestre</th>
+                                        <th>Tipo de Ocorrência</th>
+                                        <th class="text-end">Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container text-center py-4 text-muted small">
+        Estatísticas Trimestrais das Ocorrências Policiais - Estado de São Paulo
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

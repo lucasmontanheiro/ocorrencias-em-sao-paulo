@@ -1,0 +1,35 @@
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.table-responsive {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+#chart-container {
+    padding: 10px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.form-select, .btn {
+    border-radius: 8px;
+}
+
+.badge {
+    font-weight: 500;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
