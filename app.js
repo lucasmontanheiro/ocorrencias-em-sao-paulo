@@ -1,21 +1,20 @@
-const TSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQw0GfhDI_zlvF9D6Yg12J3TgiVATzPce02bZawK8leojxJfzQEP9XdTneuIszc_IsaRXzMC31Gvj9n/pub?gid=955036629&single=true&output=tsv';
-// const TSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtc31Iw2WCRqMZHMqJqFqMWnKBtHLdvo2xhNcGCoKuVf3UHtLq8TM-xnthrxDCVHjjHqWvqk3v7Shb/pub?gid=1114808713&single=true&output=tsv';
+const TSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtc31Iw2WCRqMZHMqJqFqMWnKBtHLdvo2xhNcGCoKuVf3UHtLq8TM-xnthrxDCVHjjHqWvqk3v7Shb/pub?gid=1114808713&single=true&output=tsv';
 
 const REGIONS_LABELS = {
-    'data_estado': 'Estado de SP',
-    'data_capital': 'Capital',
-    'data_grandesp': 'Grande SP',
-    'data_interior': 'Interior',
-    'data_deinter1': 'Deinter 1 (SJC)',
-    'data_deinter2': 'Deinter 2 (Campinas)',
-    'data_deinter3': 'Deinter 3 (Ribeirão Preto)',
-    'data_deinter4': 'Deinter 4 (Bauru)',
-    'data_deinter5': 'Deinter 5 (SJR Preto)',
-    'data_deinter6': 'Deinter 6 (Santos)',
-    'data_deinter7': 'Deinter 7 (Sorocaba)',
-    'data_deinter8': 'Deinter 8 (Pres. Prudente)',
-    'data_deinter9': 'Deinter 9 (Piracicaba)',
-    'data_deinter10': 'Deinter 10 (Araçatuba)'
+    'Estado': 'Estado de SP',
+    'Capital': 'Capital',
+    'Gde SP(1)': 'Grande SP',
+    'Interior': 'Interior',
+    'Deinter 1': 'Deinter 1 (SJC)',
+    'Deinter 2': 'Deinter 2 (Campinas)',
+    'Deinter 3': 'Deinter 3 (Ribeirão Preto)',
+    'Deinter 4': 'Deinter 4 (Bauru)',
+    'Deinter 5': 'Deinter 5 (SJR Preto)',
+    'Deinter 6': 'Deinter 6 (Santos)',
+    'Deinter 7': 'Deinter 7 (Sorocaba)',
+    'Deinter 8': 'Deinter 8 (Pres. Prudente)',
+    'Deinter 9': 'Deinter 9 (Piracicaba)',
+    'Deinter 10': 'Deinter 10 (Araçatuba)'
 };
 
 let rawData = [];
@@ -38,7 +37,8 @@ async function fetchData() {
             delimiter: "\t",
             skipEmptyLines: true,
             complete: (results) => {
-                rawData = results.data.filter(d => d.year && d.ocorrencia);
+                // Filter where Year and the main metric exist
+                rawData = results.data.filter(d => d.Year && d['Ocorrências policiais registradas, por natureza']);
                 initFilters();
                 updateView();
                 document.getElementById('loading-badge').classList.add('d-none');
@@ -52,9 +52,9 @@ async function fetchData() {
 }
 
 function initFilters() {
-    const ocorrencias = [...new Set(rawData.map(d => d.ocorrencia))].filter(Boolean).sort();
-    const anos = [...new Set(rawData.map(d => d.year))].sort((a, b) => b - a);
-    const trimestres = [...new Set(rawData.map(d => d.quarter))].sort();
+    const ocorrencias = [...new Set(rawData.map(d => d['Ocorrências policiais registradas, por natureza']))].filter(Boolean).sort();
+    const anos = [...new Set(rawData.map(d => d.Year))].sort((a, b) => b - a);
+    const trimestres = [...new Set(rawData.map(d => d.Quarter))].sort();
     
     const filterTipo = document.getElementById('filter-tipo');
     const filterRegiao = document.getElementById('filter-regiao');
@@ -118,14 +118,14 @@ function updateView() {
     const trimestre = document.getElementById('filter-trimestre').value;
     const chartType = document.querySelector('input[name="chartType"]:checked').value;
 
-    let filtered = rawData.filter(d => d.ocorrencia === metric);
+    let filtered = rawData.filter(d => d['Ocorrências policiais registradas, por natureza'] === metric);
     
-    if (ano !== 'all') filtered = filtered.filter(d => d.year == ano);
-    if (trimestre !== 'all') filtered = filtered.filter(d => d.quarter === trimestre);
+    if (ano !== 'all') filtered = filtered.filter(d => d.Year == ano);
+    if (trimestre !== 'all') filtered = filtered.filter(d => d.Quarter === trimestre);
 
     filtered.sort((a, b) => {
-        if (a.year !== b.year) return a.year - b.year;
-        return a.quarter.localeCompare(b.quarter);
+        if (a.Year !== b.Year) return a.Year - b.Year;
+        return a.Quarter.localeCompare(b.Quarter);
     });
 
     updateChart(filtered, regiao, chartType, metric);
@@ -134,7 +134,7 @@ function updateView() {
 
 function updateChart(data, regiao, type, titulo) {
     const ctx = document.getElementById('mainChart').getContext('2d');
-    const labels = data.map(d => `${d.year} ${d.quarter}`);
+    const labels = data.map(d => `${d.Year} ${d.Quarter}`);
     
     if (chartInstance) chartInstance.destroy();
 
@@ -142,7 +142,7 @@ function updateChart(data, regiao, type, titulo) {
     let datasets = [];
 
     if (regiao === 'all') {
-        const regionsToDisplay = Object.keys(REGIONS_LABELS).filter(r => r !== 'data_estado');
+        const regionsToDisplay = Object.keys(REGIONS_LABELS).filter(r => r !== 'Estado');
         datasets = regionsToDisplay.map((r, i) => ({
             label: REGIONS_LABELS[r],
             data: data.map(d => parseValue(d[r])),
@@ -188,10 +188,10 @@ function updateTable(data, regiao) {
 
     data.forEach(d => {
         const row = document.createElement('tr');
-        const valor = regiao === 'all' ? d['data_estado'] : d[regiao];
+        const valor = regiao === 'all' ? d['Estado'] : d[regiao];
         row.innerHTML = `
-            <td>${d.year} - ${d.quarter}</td>
-            <td><small class="text-muted">${d.ocorrencia}</small></td>
+            <td>${d.Year} - ${d.Quarter}</td>
+            <td><small class="text-muted">${d['Ocorrências policiais registradas, por natureza']}</small></td>
             <td class="text-end fw-bold">${parseValue(valor).toLocaleString('pt-BR')}</td>
         `;
         tbody.appendChild(row);
