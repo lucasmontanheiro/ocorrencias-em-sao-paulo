@@ -381,6 +381,170 @@ Year,Quarter,Category,"Ocorrências policiais registradas, por natureza",Capital
 2017,01,Exames Outros do IML à Margem do GDL (12) (13),Exames Outros do IML à Margem do GDL (12) (13) - Exames Outros Realizados - IML (14),7222,,,,,,,,,,,,,7222
 2017,01,Exames Outros do IML à Margem do GDL (12) (13),Exames Outros do IML à Margem do GDL (12) (13) - Laudos Outros Expedidos do Ano - IML (15),3086,,,,,,,,,,,,,3086
 2017,01,Exames Outros do IML à Margem do GDL (12) (13),Exames Outros do IML à Margem do GDL (12) (13) - Laudos Outros Expedidos do Ano Anterior IML (16),3463,,,,,,,,,,,,,3463
+2017,02,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Contra a pessoa",23067,16229,78941,7396,11476,11746,8862,6618,5534,8640,4163,10866,3640,118237
+2017,02,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Contra o patrimônio",120422,52863,124724,13235,22928,19243,10068,6728,16296,13155,3246,16446,3379,298009
+2017,02,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Contra a Dignidade Sexual",741,511,1994,203,287,268,174,167,153,346,72,225,99,3246
+2017,02,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Entorpecentes",2469,1901,10616,816,1287,1835,1079,704,1255,1053,559,1487,541,14986
+2017,02,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Contravencionais",1343,1161,8245,575,851,1462,1132,657,542,1000,515,1121,390,10749
+2017,02,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Outros criminais (não inclui contravenções)",5115,4101,18620,1474,2425,2436,1948,1725,1485,2445,1064,2685,933,27836
+2017,02,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Total de Crimes Violentos ( Hom.Doloso, Roubo,
+  Latrocínio, Estupro e EMS)",48067,24397,27436,3606,5994,3307,1068,672,6115,2840,203,3336,295,99900
+2017,02,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Total de delitos",153157,76766,243140,23699,39254,36990,23263,16599,25265,26639,9619,32830,8982,473063
+2017,02,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Não Criminais",134964,63049,186349,18318,32872,29116,16693,10266,18155,20225,7337,26216,7151,384362
+2017,02,Atividades de polícia judiciária,Atividades de polícia judiciária - Total de boletins de ocorrência,157936,135389,420854,43088,71849,67006,40862,27426,32361,46504,17202,58110,16446,714179
+2017,02,Atividades de polícia judiciária,"Atividades de polícia judiciária - Total de termos circunstanciados lavrados pela Polícia
+  Civil (2)",2892,4274,29650,2455,2444,4157,4384,2715,2903,2756,3188,3517,1131,36816
+2017,02,Atividades de polícia judiciária,Atividades de polícia judiciária - Total de inquéritos instaurados,26601,17810,57685,6164,7621,9044,5385,4493,4770,6999,3042,7471,2696,102096
+2017,02,Ocorrências envolvendo policiais civis (3),"Ocorrências envolvendo policiais civis (3) - Pessoas mortas em confronto com a polícia civil em
+  serviço (8)",0,1,4,0,0,0,0,0,1,3,0,0,0,5
+2017,02,Ocorrências envolvendo policiais civis (3),Ocorrências envolvendo policiais civis (3) - Pessoas mortas por policiais civis de folga (8),2,1,0,0,0,0,0,0,0,0,0,0,0,3
+2017,02,Ocorrências envolvendo policiais civis (3),"Ocorrências envolvendo policiais civis (3) - Pessoas feridas em confronto com a polícia civil em
+  serviço",11,3,3,0,1,2,0,0,0,0,0,0,0,17
+2017,02,Ocorrências envolvendo policiais civis (3),Ocorrências envolvendo policiais civis (3) - Pessoas feridas por policiais civis de folga,3,2,5,0,1,0,0,0,0,0,0,3,1,10
+2017,02,Ocorrências envolvendo policiais civis (3),Ocorrências envolvendo policiais civis (3) - Policiais civis mortos em serviço,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+2017,02,Ocorrências envolvendo policiais civis (3),Ocorrências envolvendo policiais civis (3) - Policiais civis mortos de folga,1,0,4,1,0,1,1,0,0,0,0,0,1,5
+2017,02,Ocorrências envolvendo policiais civis (3),Ocorrências envolvendo policiais civis (3) - Policiais civis feridos em serviço,14,5,11,0,2,2,1,2,0,1,0,3,0,30
+2017,02,Ocorrências envolvendo policiais civis (3),Ocorrências envolvendo policiais civis (3) - Policiais civis feridos de folga,9,3,8,0,2,2,0,0,1,0,1,2,0,20
+2017,02,Atividades policiais,Atividades policiais - Prisões efetuadas (em flagrante+ por mandado),9376,8379,27348,2339,3436,4286,2725,1850,2664,3965,1371,3596,1116,45103
+2017,02,Atividades policiais,Atividades policiais - Nº de pessoas presas em flagrante,9772,5913,17919,1685,2653,2796,1702,1031,1858,2188,769,2435,802,33604
+2017,02,Atividades policiais,Atividades policiais - Nº de pessoas presas por mandado,4007,3086,12408,903,1289,1993,1280,1018,1108,2151,817,1412,437,19501
+2017,02,Atividades policiais,Atividades policiais - Nº de autos de apreensão (art 173 ECA),1046,754,1941,255,237,455,233,89,160,159,73,193,87,3741
+2017,02,Atividades policiais,Atividades policiais - Nº de infratores apreendidos em flagrante,1095,958,2769,324,317,595,297,145,292,236,76,362,125,4822
+2017,02,Atividades policiais,Atividades policiais - Nº de infratores apreendidos por mandado,42,146,1156,110,135,178,131,132,88,97,66,185,34,1344
+2017,02,Atividades policiais,Atividades policiais - Nº de revistas pessoais/ identificação (9),1235436,557737,"2547408,216",250657,233024,557513,142907,99106,251512,211918,55405,"260532,216",84322,4340581
+2017,02,Atividades policiais,Atividades policiais - Armas de fogo apreendidas,939,621,2429,277,324,319,214,133,368,274,139,287,94,3989
+2017,02,Atividades policiais,Atividades policiais - Nº de Veículos Recuperados,7394,4341,7410,691,1328,1125,432,423,818,755,153,1548,137,19145
+2017,02,Ocorrências envolvendo policiais militares (4),"Ocorrências envolvendo policiais militares (4) - Pessoas mortas em confronto com a polícia militar em
+  serviço (8)",70,37,46,2,9,4,0,3,10,7,1,10,0,153
+2017,02,Ocorrências envolvendo policiais militares (4),Ocorrências envolvendo policiais militares (4) - Pessoas mortas por policiais militares de folga (8A),37,10,14,1,3,0,0,0,8,1,0,1,0,61
+2017,02,Ocorrências envolvendo policiais militares (4),"Ocorrências envolvendo policiais militares (4) - Pessoas feridas em confronto com a polícia militar em
+  serviço",58,25,48,8,5,4,5,1,15,3,1,6,0,131
+2017,02,Ocorrências envolvendo policiais militares (4),Ocorrências envolvendo policiais militares (4) - Pessoas feridas por policiais militares de folga,26,15,11,2,2,2,0,1,3,1,0,0,0,52
+2017,02,Ocorrências envolvendo policiais militares (4),Ocorrências envolvendo policiais militares (4) - Policiais militares mortos em serviço,3,2,0,0,0,0,0,0,0,0,0,0,0,5
+2017,02,Ocorrências envolvendo policiais militares (4),Ocorrências envolvendo policiais militares (4) - Policiais militares mortos de folga,7,0,3,0,0,1,0,0,2,0,0,0,0,10
+2017,02,Ocorrências envolvendo policiais militares (4),Ocorrências envolvendo policiais militares (4) - Policiais militares feridos em serviço,19,9,22,3,1,2,1,0,7,4,2,2,0,50
+2017,02,Ocorrências envolvendo policiais militares (4),Ocorrências envolvendo policiais militares (4) - Policiais militares feridos de folga,17,7,7,1,0,1,1,0,2,2,0,0,0,31
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Homicídio doloso",170,204,410,79,55,54,30,12,46,49,11,53,21,784
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Nº de Vítimas em Homicídio Doloso",189,217,428,83,56,57,31,14,47,54,11,54,21,834
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Homicídio Doloso por acidente de trânsito (10)",4,3,7,0,1,2,1,0,1,1,0,0,1,14
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Nº de Vítimas em Homicídio Doloso por acidente de
+  trânsito (11)",4,3,8,0,1,3,1,0,1,1,0,0,1,15
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Homicídio culposo por Acidente de Trânsito",132,128,667,55,112,92,64,57,53,96,30,76,32,927
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Homicídio Culposo (7)",140,133,700,58,115,94,67,62,56,103,31,79,35,973
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Tentativa de homicídio",233,167,549,117,58,82,32,32,66,56,17,54,35,949
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Lesão corporal dolosa",7114,4906,20270,1980,2865,3134,2307,1490,1460,2356,1071,2848,759,32290
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Lesão corporal culposa por Acidente de Trânsito",4035,3140,16691,1126,2576,2104,2052,1930,791,1486,890,2753,983,23866
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Lesão corporal culposa outras",245,109,448,35,73,77,25,50,62,32,26,48,20,802
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Lesão Corporal Seguida de Morte",0,2,3,0,1,0,1,0,0,0,0,0,1,5
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Latrocínio",39,22,38,5,5,7,4,2,9,3,1,1,1,99
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Nº de Vítimas de Latrocínio",39,22,39,5,5,8,4,2,9,3,1,1,1,100
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Estupro TOTAL (17)",574,485,1554,157,201,221,144,138,107,288,56,178,64,2613
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Estupro",201,170,474,38,69,58,48,41,50,82,10,54,24,845
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Estupro de Vulnerável",373,315,1080,119,132,163,96,97,57,206,46,124,40,1768
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Extorsão mediante seqüestro (5)",0,1,1,1,0,0,0,0,0,0,0,0,0,2
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Tráfico de entorpecentes",2341,1718,8384,783,1063,1587,808,613,501,856,343,1407,423,12443
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Roubo - outros TOTAL(6)",39283,18610,21685,2937,4463,2692,838,478,5203,2216,129,2538,191,79578
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Roubo - Outros",37857,17907,21137,2868,4293,2647,817,467,5092,2183,127,2455,188,76901
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Roubo de veículos",8001,5075,3748,427,1270,333,52,42,750,284,6,566,18,16824
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Roubo a Banco",11,0,11,0,4,2,0,1,1,1,0,2,0,22
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Roubo de Carga",1415,703,537,69,166,43,21,10,110,32,2,81,3,2655
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Furto - outros",47319,16367,64923,6423,10784,11309,6146,4269,6649,7084,2037,8137,2085,128609
+2017,02,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Furto de veículos",10858,5660,9861,1233,1947,1368,516,562,1007,1032,159,1905,132,26379
+2017,02,Exames de Natureza Necroscópica (12),Exames de Natureza Necroscópica (12) - Exames Necroscópicos Realizados - IML,2652,1684,4064,,,,,,,,,,,8400
+2017,02,Exames de Natureza Necroscópica (12),Exames de Natureza Necroscópica (12) - Laudos Necroscópicos Expedidos do Ano - IML,1111,1238,3513,,,,,,,,,,,5862
+2017,02,Exames de Natureza Necroscópica (12),Exames de Natureza Necroscópica (12) - Laudos Necroscópicos Expedidos do Ano Anterior IML,348,87,165,,,,,,,,,,,600
+2017,02,Clínicos e Laboratoriais (12),Clínicos e Laboratoriais (12) - Exames Clínicos Laboratoriais Realizados - IML (14),30688,20354,58978,,,,,,,,,,,110020
+2017,02,Clínicos e Laboratoriais (12),Clínicos e Laboratoriais (12) - Laudos Clínicos Laboratoriais Expedidos do Ano - IML (15),29777,19868,56868,,,,,,,,,,,106513
+2017,02,Clínicos e Laboratoriais (12),"Clínicos e Laboratoriais (12) - Laudos Clínicos Laboratoriais Expedidos do Ano Anterior -
+  IML (16)",12,28,62,,,,,,,,,,,102
+2017,02,Criminalísticos (12),Criminalísticos (12) - Exames Periciais Realizados - IC,39993,20797,81640,,,,,,,,,,,142430
+2017,02,Criminalísticos (12),Criminalísticos (12) - Laudos Periciais Expedidos do Ano - IC,29186,13597,61225,,,,,,,,,,,104008
+2017,02,Criminalísticos (12),Criminalísticos (12) - Laudos Periciais Expedidos do Ano Anterior- IC,2551,1575,4003,,,,,,,,,,,8129
+2017,02,Exames Outros do IML à Margem do GDL (12) (13),Exames Outros do IML à Margem do GDL (12) (13) - Exames Outros Realizados - IML (14),7188,,,,,,,,,,,,,7188
+2017,02,Exames Outros do IML à Margem do GDL (12) (13),Exames Outros do IML à Margem do GDL (12) (13) - Laudos Outros Expedidos do Ano - IML (15),6770,,,,,,,,,,,,,6770
+2017,02,Exames Outros do IML à Margem do GDL (12) (13),Exames Outros do IML à Margem do GDL (12) (13) - Laudos Outros Expedidos do Ano Anterior IML (16),324,,,,,,,,,,,,,324
+2017,03,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Contra a pessoa",23095,16131,77857,7305,10844,11650,8607,6545,5544,8796,4305,10707,3554,117083
+2017,03,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Contra o patrimônio",117522,52902,119720,12516,21363,18385,9804,6411,15849,12760,3082,15812,3738,290144
+2017,03,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Contra a Dignidade Sexual",2169,561,2032,193,274,316,203,154,156,368,62,213,93,4762
+2017,03,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Entorpecentes",2361,1908,10546,849,1112,1932,1119,651,1228,1126,594,1357,578,14815
+2017,03,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Contravencionais",1495,1056,8217,625,795,1402,1153,668,614,1002,491,1123,344,10768
+2017,03,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Outros criminais (não inclui contravenções)",5415,4095,20531,1629,2646,2764,2250,1940,1422,2644,1152,3033,1051,30041
+2017,03,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Total de Crimes Violentos ( Hom.Doloso, Roubo,
+  Latrocínio, Estupro e EMS)",45420,23017,24060,2995,5459,2748,1000,600,5176,2375,149,3213,345,92497
+2017,03,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Total de delitos",152057,76653,238903,23117,37034,36449,23136,16369,24813,26696,9686,32245,9358,467613
+2017,03,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Não Criminais",136297,64105,188007,18412,32567,29147,17064,10605,18377,20719,7514,26340,7262,388409
+2017,03,Atividades de polícia judiciária,Atividades de polícia judiciária - Total de boletins de ocorrência,158141,135835,417653,42635,69727,66301,40969,27766,31757,46596,17343,57681,16878,711629
+2017,03,Atividades de polícia judiciária,"Atividades de polícia judiciária - Total de termos circunstanciados lavrados pela Polícia
+  Civil (2)",2966,4320,29555,2622,2499,4152,4234,2623,2526,2857,3234,3436,1372,36841
+2017,03,Atividades de polícia judiciária,Atividades de polícia judiciária - Total de inquéritos instaurados,25384,17195,56687,6363,6936,9097,5430,4498,4271,7388,2964,6842,2898,99266
+2017,03,Ocorrências envolvendo policiais civis (3),"Ocorrências envolvendo policiais civis (3) - Pessoas mortas em confronto com a polícia civil em
+  serviço (8)",11,6,5,1,3,0,0,0,0,1,0,0,0,22
+2017,03,Ocorrências envolvendo policiais civis (3),Ocorrências envolvendo policiais civis (3) - Pessoas mortas por policiais civis de folga (8),3,1,2,0,0,0,0,0,2,0,0,0,0,6
+2017,03,Ocorrências envolvendo policiais civis (3),"Ocorrências envolvendo policiais civis (3) - Pessoas feridas em confronto com a polícia civil em
+  serviço",15,2,11,1,2,0,0,0,2,2,0,4,0,28
+2017,03,Ocorrências envolvendo policiais civis (3),Ocorrências envolvendo policiais civis (3) - Pessoas feridas por policiais civis de folga,4,0,4,0,2,0,0,0,2,0,0,0,0,8
+2017,03,Ocorrências envolvendo policiais civis (3),Ocorrências envolvendo policiais civis (3) - Policiais civis mortos em serviço,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+2017,03,Ocorrências envolvendo policiais civis (3),Ocorrências envolvendo policiais civis (3) - Policiais civis mortos de folga,0,1,1,0,1,0,0,0,0,0,0,0,0,2
+2017,03,Ocorrências envolvendo policiais civis (3),Ocorrências envolvendo policiais civis (3) - Policiais civis feridos em serviço,6,4,16,1,0,3,1,0,2,4,0,4,1,26
+2017,03,Ocorrências envolvendo policiais civis (3),Ocorrências envolvendo policiais civis (3) - Policiais civis feridos de folga,4,1,6,0,1,0,0,0,2,1,1,1,0,11
+2017,03,Atividades policiais,Atividades policiais - Prisões efetuadas (em flagrante+ por mandado),9125,8506,27148,2576,3199,4104,2721,1945,2552,3928,1417,3456,1250,44779
+2017,03,Atividades policiais,Atividades policiais - Nº de pessoas presas em flagrante,9787,5944,17385,1780,2340,2799,1726,1008,1695,2083,750,2280,924,33116
+2017,03,Atividades policiais,Atividades policiais - Nº de pessoas presas por mandado,3459,3153,12786,1048,1301,1842,1289,1086,1203,2253,891,1437,436,19398
+2017,03,Atividades policiais,Atividades policiais - Nº de autos de apreensão (art 173 ECA),1020,710,1836,291,201,397,237,90,137,166,80,151,86,3566
+2017,03,Atividades policiais,Atividades policiais - Nº de infratores apreendidos em flagrante,1099,894,2551,358,259,524,284,114,292,218,96,307,99,4544
+2017,03,Atividades policiais,Atividades policiais - Nº de infratores apreendidos por mandado,244,163,1043,107,90,178,114,115,103,101,59,149,27,1450
+2017,03,Atividades policiais,Atividades policiais - Nº de revistas pessoais/ identificação (9),1232741,576301,2575871,273583,232701,534548,138879,100470,264178,219024,56019,267327,86976,4384913
+2017,03,Atividades policiais,Atividades policiais - Armas de fogo apreendidas,883,569,2428,269,337,414,205,137,302,314,85,268,97,3880
+2017,03,Atividades policiais,Atividades policiais - Nº de Veículos Recuperados,6988,4192,6971,638,1506,1098,416,320,779,638,128,1326,122,18151
+2017,03,Ocorrências envolvendo policiais militares (4),"Ocorrências envolvendo policiais militares (4) - Pessoas mortas em confronto com a polícia militar em
+  serviço (8)",44,35,62,7,6,9,5,6,11,8,4,6,0,141
+2017,03,Ocorrências envolvendo policiais militares (4),Ocorrências envolvendo policiais militares (4) - Pessoas mortas por policiais militares de folga (8A),33,19,8,2,3,0,0,0,0,0,0,3,0,60
+2017,03,Ocorrências envolvendo policiais militares (4),"Ocorrências envolvendo policiais militares (4) - Pessoas feridas em confronto com a polícia militar em
+  serviço",50,17,42,2,4,10,6,4,5,4,3,4,0,109
+2017,03,Ocorrências envolvendo policiais militares (4),Ocorrências envolvendo policiais militares (4) - Pessoas feridas por policiais militares de folga,28,5,15,1,2,0,3,0,7,1,0,1,0,48
+2017,03,Ocorrências envolvendo policiais militares (4),Ocorrências envolvendo policiais militares (4) - Policiais militares mortos em serviço,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+2017,03,Ocorrências envolvendo policiais militares (4),Ocorrências envolvendo policiais militares (4) - Policiais militares mortos de folga,3,2,3,0,0,0,0,1,1,0,0,1,0,8
+2017,03,Ocorrências envolvendo policiais militares (4),Ocorrências envolvendo policiais militares (4) - Policiais militares feridos em serviço,18,7,19,0,3,4,0,1,4,0,1,6,0,44
+2017,03,Ocorrências envolvendo policiais militares (4),Ocorrências envolvendo policiais militares (4) - Policiais militares feridos de folga,21,5,10,1,0,0,0,1,4,4,0,0,0,36
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Homicídio doloso",153,186,438,68,66,77,26,21,34,53,7,64,22,777
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Nº de Vítimas em Homicídio Doloso",167,193,460,75,66,82,26,23,35,53,7,70,23,820
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Homicídio Doloso por acidente de trânsito (10)",6,1,6,1,1,0,2,0,0,0,0,2,0,13
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Nº de Vítimas em Homicídio Doloso por acidente de
+  trânsito (11)",8,1,10,4,1,0,2,0,0,0,0,3,0,19
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Homicídio culposo por Acidente de Trânsito",84,132,731,65,112,99,85,54,75,104,28,87,22,947
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Homicídio Culposo (7)",90,137,754,69,115,102,87,54,79,106,29,89,24,981
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Tentativa de homicídio",168,164,515,75,70,74,45,42,57,57,15,54,26,847
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Lesão corporal dolosa",7473,4867,20441,1952,2821,3082,2197,1607,1435,2443,1201,2879,824,32781
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Lesão corporal culposa por Acidente de Trânsito",3915,3113,15863,1020,2335,1949,1984,1709,854,1506,830,2693,983,22891
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Lesão corporal culposa outras",273,69,387,38,45,74,27,54,51,15,30,22,31,729
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Lesão Corporal Seguida de Morte",0,2,10,1,0,3,4,1,0,0,1,0,0,12
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Latrocínio",19,17,27,4,4,4,2,1,6,2,0,3,1,63
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Nº de Vítimas de Latrocínio",19,17,27,4,4,4,2,1,6,2,0,3,1,63
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Estupro TOTAL (17)",609,580,1579,149,192,255,158,131,117,310,49,153,65,2768
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Estupro",215,183,440,48,66,63,33,28,70,77,7,39,9,838
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Estupro de Vulnerável",394,397,1139,101,126,192,125,103,47,233,42,114,56,1930
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Extorsão mediante seqüestro (5)",5,1,0,0,0,0,0,0,0,0,0,0,0,6
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Tráfico de entorpecentes",2390,1785,8306,840,906,1629,784,579,556,892,357,1277,486,12481
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Roubo - outros TOTAL(6)",36886,17409,18489,2392,3989,2106,774,405,4345,1725,87,2427,239,72784
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Roubo - Outros",35514,16689,17942,2346,3853,2035,760,398,4207,1694,84,2329,236,70145
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Roubo de veículos",7748,4824,3527,382,1208,306,40,42,674,285,6,566,18,16099
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Roubo a Banco",5,2,9,2,2,1,0,1,1,0,0,2,0,16
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Roubo de Carga",1367,718,538,44,134,70,14,6,137,31,3,96,3,2623
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Furto - outros",47637,16940,62299,6353,9757,10912,6035,4071,6478,6903,1962,7522,2306,126876
+2017,03,"Ocorrências policiais registradas, por tipo","Ocorrências policiais registradas, por tipo - Furto de veículos",10816,5736,9611,1230,2004,1232,489,492,949,1030,113,1956,116,26163
+2017,03,Exames de Natureza Necroscópica (12),Exames de Natureza Necroscópica (12) - Exames Necroscópicos Realizados - IML,2650,1633,4161,,,,,,,,,,,8444
+2017,03,Exames de Natureza Necroscópica (12),Exames de Natureza Necroscópica (12) - Laudos Necroscópicos Expedidos do Ano - IML,3002,1628,4166,,,,,,,,,,,8796
+2017,03,Exames de Natureza Necroscópica (12),Exames de Natureza Necroscópica (12) - Laudos Necroscópicos Expedidos do Ano Anterior IML,260,30,25,,,,,,,,,,,315
+2017,03,Clínicos e Laboratoriais (12),Clínicos e Laboratoriais (12) - Exames Clínicos Laboratoriais Realizados - IML (14),28191,20016,58304,,,,,,,,,,,106511
+2017,03,Clínicos e Laboratoriais (12),Clínicos e Laboratoriais (12) - Laudos Clínicos Laboratoriais Expedidos do Ano - IML (15),29114,20360,57590,,,,,,,,,,,107064
+2017,03,Clínicos e Laboratoriais (12),"Clínicos e Laboratoriais (12) - Laudos Clínicos Laboratoriais Expedidos do Ano Anterior -
+  IML (16)",56,6,82,,,,,,,,,,,144
+2017,03,Criminalísticos (12),Criminalísticos (12) - Exames Periciais Realizados - IC,39731,19598,81984,,,,,,,,,,,141313
+2017,03,Criminalísticos (12),Criminalísticos (12) - Laudos Periciais Expedidos do Ano - IC,31027,13542,61082,,,,,,,,,,,105651
+2017,03,Criminalísticos (12),Criminalísticos (12) - Laudos Periciais Expedidos do Ano Anterior- IC,1132,672,5075,,,,,,,,,,,6879
+2017,03,Exames Outros do IML à Margem do GDL (12) (13),Exames Outros do IML à Margem do GDL (12) (13) - Exames Outros Realizados - IML (14),8036,,,,,,,,,,,,,8036
+2017,03,Exames Outros do IML à Margem do GDL (12) (13),Exames Outros do IML à Margem do GDL (12) (13) - Laudos Outros Expedidos do Ano - IML (15),7834,,,,,,,,,,,,,7834
+2017,03,Exames Outros do IML à Margem do GDL (12) (13),Exames Outros do IML à Margem do GDL (12) (13) - Laudos Outros Expedidos do Ano Anterior IML (16),56,,,,,,,,,,,,,56
 2017,04,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Contra a pessoa",23543,16631,79660,7489,11341,11670,9066,6061,5900,9268,4288,11041,3536,119834
 2017,04,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Contra o patrimônio",116313,51258,114314,11827,20418,17678,9493,6466,14761,12347,2904,15161,3259,281885
 2017,04,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Contra a Dignidade Sexual",1007,618,2083,192,305,299,240,151,196,330,79,206,85,3708
