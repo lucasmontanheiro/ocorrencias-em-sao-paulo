@@ -94,7 +94,11 @@ def fetch_and_parse(year, quarter):
                 # Apply number cleaning to data rows
                 # cleaned_row = [Natureza, Capital, ...]
                 # Index 0 is Natureza (text), Index 1+ are numbers
-                formatted_row = [cleaned_row[0]] + [clean_number(val) for val in cleaned_row[1:]]
+                
+                # Prepend Category to Natureza to ensure uniqueness
+                natureza_unique = f"{current_category} - {cleaned_row[0]}"
+                
+                formatted_row = [natureza_unique] + [clean_number(val) for val in cleaned_row[1:]]
                 
                 # Add Year, Quarter, Category
                 final_row = [str(year), q_str, current_category] + formatted_row
