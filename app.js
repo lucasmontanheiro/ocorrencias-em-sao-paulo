@@ -1,4 +1,4 @@
-const TSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtc31Iw2WCRqMZHMqJqFqMWnKBtHLdvo2xhNcGCoKuVf3UHtLq8TM-xnthrxDCVHjjHqWvqk3v7Shb/pub?gid=1114808713&single=true&output=tsv';
+const DATA_URL = 'ssp_data_2016_2025.csv';
 
 const REGIONS_LABELS = {
     'Estado': 'Estado de SP',
@@ -13,8 +13,7 @@ const REGIONS_LABELS = {
     'Deinter 6': 'Deinter 6 (Santos)',
     'Deinter 7': 'Deinter 7 (Sorocaba)',
     'Deinter 8': 'Deinter 8 (Pres. Prudente)',
-    'Deinter 9': 'Deinter 9 (Piracicaba)',
-    'Deinter 10': 'Deinter 10 (Araçatuba)'
+    'Deinter 9': 'Deinter 10 (Araçatuba)'
 };
 
 let rawData = [];
@@ -27,14 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchData() {
     try {
-        const response = await fetch(TSV_URL);
+        const response = await fetch(DATA_URL);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         
-        const tsvText = await response.text();
+        const csvText = await response.text();
         
-        Papa.parse(tsvText, {
+        Papa.parse(csvText, {
             header: true,
-            delimiter: "\t",
             skipEmptyLines: true,
             complete: (results) => {
                 // Filter where Year and the main metric exist
