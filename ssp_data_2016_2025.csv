@@ -1,4 +1,4 @@
-Year,Quarter,Category,"Ocorrências policiais registradas, por natureza",Capital,Gde SP(1),Interior,Deinter 1,Deinter 2,Deinter 3,Deinter 4,Deinter 5,Deinter 6,Deinter 7,Deinter 8,Deinter 9,Deinter 10,Estado
+Year,Quarter,Category,metric,Capital,Gde SP(1),Interior,Deinter 1,Deinter 2,Deinter 3,Deinter 4,Deinter 5,Deinter 6,Deinter 7,Deinter 8,Deinter 9,Deinter 10,Estado
 2016,01,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Contra a pessoa",25636,19006,87854,8567,12345,13092,9800,7068,6840,10079,4627,11834,3602,132496
 2016,01,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Contra o patrimônio",117279,55985,125875,12916,22403,19598,9723,7152,16976,12357,3407,17617,3726,299139
 2016,01,"Ocorrências policiais registradas, por natureza","Ocorrências policiais registradas, por natureza - Contra a Dignidade Sexual",659,552,1943,218,291,238,198,131,172,328,84,214,69,3154
@@ -3417,7 +3417,7 @@ Year,Quarter,Category,"Ocorrências policiais registradas, por natureza",Capital
 2025,04,Atividades policiais,Atividades policiais - Nº de infratores apreendidos por mandado,66,64,432,43,36,108,29,25,50,36,20,75,10,562
 2025,04,Atividades policiais,Atividades policiais - Nº de revistas pessoais/ identificação (9),2467017,1060241,2114122,190536,327994,215053,95466,90465,372209,266827,77280,258071,66463,5641380
 2025,04,Atividades policiais,Atividades policiais - Armas de fogo apreendidas,769,609,2093,233,294,303,193,177,199,244,60,315,75,3471
-2025,04,Atividades policiais,Atividades policiais - Nº de Veículos Recuperados,4842,3297,5098,541,1001,762,196,246,685,643,101,842,81,13237
+2025,04,Atividades policiais,Atividades policiais - Nº de Veículos Recuperados,4768,3149,4904,529,998,710,186,233,679,615,91,790,73,12821
 2025,04,Ocorrências envolvendo policiais militares (4),"Ocorrências envolvendo policiais militares (4) - Pessoas mortas em confronto com a polícia militar em
   serviço (8)",64,48,130,8,20,14,16,11,11,17,4,27,2,242
 2025,04,Ocorrências envolvendo policiais militares (4),Ocorrências envolvendo policiais militares (4) - Pessoas mortas por policiais militares de folga (8A),19,6,5,0,3,0,0,0,1,1,0,0,0,30

@@ -123,6 +123,12 @@ def main():
                         # desired output header: ["Year", "Quarter", "Category", Col1, Col2...]
                         
                         dynamic_headers = row[2:] # specific stats columns
+                        
+                        # The first column in dynamic_headers is currently 'Ocorrências policiais registradas, por natureza'
+                        # Overwrite it with 'metric' as requested by the user
+                        if dynamic_headers:
+                            dynamic_headers[0] = "Metric"
+                            
                         full_header = ["Year", "Quarter", "Category"] + dynamic_headers
                         all_data.append(full_header)
                         header_written = True
