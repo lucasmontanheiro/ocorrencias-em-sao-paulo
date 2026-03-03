@@ -1,0 +1,205 @@
+---
+title: "Análise de Criminalidade no Estado de São Paulo (2016-2025)"
+author: "Análise de Dados"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10, fig.height = 6)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(scales)
+library(stringr)
+library(ggcorrplot)
+library(knitr)
+
+# Load the processed dataset
+df_wide <- read.csv("df_wide_estado.csv", check.names = FALSE, stringsAsFactors = FALSE)
+df_wide$Date <- as.Date(df_wide$Date)
+
+# Extract metric names
+metric_names <- setdiff(names(df_wide), c("Date", "Year", "Quarter"))
+
+# Helper to extract categories
+extract_category <- function(metric_name) {
+    strsplit(metric_name, " - ")[[1]][1]
+}
+```
+
+# Resumo Executivo
+
+Este relatório fornece uma análise extensa dos dados de segurança pública do Estado de São Paulo de 2016 até o início de 2025. Ao agregar mais de 80 métricas distintas de criminalidade, buscamos descobrir tendências macro, identificar as anomalias de crescimento mais rápido pós-pandemia e destacar atividades criminosas altamente correlacionadas.
+
+---
+
+# 1. Tendências Macro de Segurança
+
+Primeiro, vamos analisar o volume total absoluto de ocorrências registradas em todas as categorias ao longo do tempo para entender a trajetória geral da segurança pública.
+
+```{r total_trend, fig.cap="Total de Ocorrências Registradas em SP (2016-2025)"}
+# Calculate total crime per quarter
+df_wide$Total_Occurrences <- rowSums(df_wide[metric_names], na.rm = TRUE)
+
+ggplot(df_wide, aes(x = Date, y = Total_Occurrences)) +
+    geom_line(color = "#2C3E50", linewidth = 1.2) +
+    geom_point(color = "#E74C3C", size = 2) +
+    geom_smooth(method = "loess", color = "darkgray", linetype = "dashed", se = FALSE) +
+    scale_y_continuous(labels = comma) +
+    scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
+    theme_minimal() +
+    labs(
+        title = "Tendência Macro: Total de Ocorrências no Estado",
+        subtitle = "Agregado trimestral de todas as métricas rastreadas",
+        x = "Ano",
+        y = "Total de Ocorrências"
+    )
+```
+
+**Insight**: A linha de tendência macro visualiza a interrupção geral causada pela pandemia de COVID-19 (2020-2021), onde restrições de mobilidade provavelmente reduziram certos tipos de crimes de rua enquanto outros mudaram. A trajetória pós-2022 indica a linha de base do "novo normal" para ocorrências em todo o estado.
+
+---
+
+# 2. Mudança Pandêmica: Crimes com Maior Crescimento e Redução
+
+Ao comparar a média pré-pandemia (antes de 2020) com a média pós-pandemia (depois de 2022), podemos identificar quais métricas específicas sofreram as mudanças sistêmicas mais drásticas.
+
+```{r growth_stats}
+yearly_totals_wide <- df_wide %>%
+    group_by(Year) %>%
+    summarise(across(all_of(metric_names), ~ sum(.x, na.rm = TRUE)), .groups = "drop")
+
+period_comparison <- yearly_totals_wide %>%
+    pivot_longer(cols = all_of(metric_names), names_to = "Metric", values_to = "Total_Year") %>%
+    mutate(Period = case_when(
+        Year < 2020 ~ "Before_2020",
+        Year > 2022 ~ "After_2022",
+        TRUE ~ "Exclude"
+    )) %>%
+    filter(Period != "Exclude") %>%
+    group_by(Metric, Period) %>%
+    summarise(Avg_Yearly = mean(Total_Year, na.rm = TRUE), .groups = "drop") %>%
+    pivot_wider(names_from = Period, values_from = Avg_Yearly, values_fill = 0) %>%
+    # Filter out low-volume anomalies to focus on significant trends
+    filter(Before_2020 > 100 & After_2022 > 100) %>%
+    mutate(
+        Pct_Increase = (After_2022 - Before_2020) / Before_2020,
+        Category = sapply(Metric, extract_category),
+        Metric_Clean = trimws(sub("^.* - ", "", Metric))
+    )
+
+# Top 10 Increases
+top_10_inc <- period_comparison %>%
+    arrange(desc(Pct_Increase)) %>%
+    head(10)
+# Top 10 Decreases
+top_10_dec <- period_comparison %>%
+    arrange(Pct_Increase) %>%
+    head(10)
+```
+
+### Top 10 Métricas em Crescimento (Pós-2022 vs Pré-2020)
+
+```{r}
+kable(
+    top_10_inc %>% select(Category, Metric_Clean, Before_2020, After_2022, Pct_Increase) %>%
+        mutate(
+            Pct_Increase = percent(Pct_Increase, accuracy = 0.1),
+            Before_2020 = comma(round(Before_2020)),
+            After_2022 = comma(round(After_2022))
+        ),
+    col.names = c("Categoria", "Métrica Específica", "Média / Ano (Pré-2020)", "Média / Ano (Pós-2022)", "Crescimento")
+)
+```
+
+### Top 10 Métricas em Redução (Pós-2022 vs Pré-2020)
+
+```{r}
+kable(
+    top_10_dec %>% select(Category, Metric_Clean, Before_2020, After_2022, Pct_Increase) %>%
+        mutate(
+            Pct_Increase = percent(Pct_Increase, accuracy = 0.1),
+            Before_2020 = comma(round(Before_2020)),
+            After_2022 = comma(round(After_2022))
+        ),
+    col.names = c("Categoria", "Métrica Específica", "Média / Ano (Pré-2020)", "Média / Ano (Pós-2022)", "Redução")
+)
+```
+
+**Insight**: Examinar as categorias que mais crescem geralmente destaca mudanças no comportamento social ou mudanças na metodologia de registro policial (por exemplo, crimes eletrônicos aumentando significativamente à medida que o comércio se moveu para o meio online). Por outro lado, as categorias que estão reduzindo geralmente apontam para intervenções de políticas públicas bem-sucedidas, maior dissuasão ou obsolescência de certos modelos criminais.
+
+---
+
+# 3. Dinâmica de Correlação: Roubos
+
+Entender como diferentes métricas de crimes se movem juntas ajuda a alocar recursos policiais. Se os roubos de veículos se correlacionam altamente com roubos de carga, desmantelar a rede de logística associada pode mitigar ambos os crimes. Abaixo está a matriz de correlação para as métricas da categoria "Roubos".
+
+```{r correlation_heatmap, fig.height=8, fig.width=10}
+# Focus on the 'Roubos' (Robberies) category
+target_cat <- "Roubos"
+cat_metrics <- metric_names[sapply(metric_names, extract_category) == target_cat]
+
+if (length(cat_metrics) > 1) {
+    df_cat <- df_wide %>% select(all_of(cat_metrics))
+    names(df_cat) <- sapply(names(df_cat), function(n) trimws(sub("^.* - ", "", n)))
+
+    corr_matrix <- suppressWarnings(cor(df_cat, use = "pairwise.complete.obs"))
+
+    # Replace NA correlations
+    corr_matrix[is.na(corr_matrix)] <- 0
+
+    ggcorrplot(corr_matrix,
+        method = "square",
+        type = "lower",
+        lab = TRUE,
+        lab_size = 3,
+        colors = c("#6D9EC1", "white", "#E46726"),
+        title = paste("Matriz de Correlação para", target_cat),
+        ggtheme = theme_minimal()
+    ) +
+        theme(
+            axis.text.x = element_text(angle = 45, hjust = 1, size = 9),
+            axis.text.y = element_text(size = 9)
+        )
+}
+```
+
+**Insight**: Correlações positivas fortes (próximas a 1,0) implicam que, à medida que um tipo de roubo aumenta, o outro geralmente aumenta em conjunto, sugerindo que os mesmos fatores econômicos ou facções criminosas estão envolvidos. Fortes correlações negativas (próximas a -1,0) implicam um efeito de substituição — à medida que a polícia reprime um tipo de roubo, os criminosos passam para a alternativa.
+
+---
+
+# 4. Destaque: Série Temporal Crítica
+
+Finalmente, vamos observar a série temporal para o crime com maior volume absoluto registrado no estado, visualizando sua sazonalidade e trajetória de longo prazo.
+
+```{r spotlight_metric}
+# Find the metric with the absolute highest average volume
+highest_volume_metric <- period_comparison %>%
+    arrange(desc(After_2022 + Before_2020)) %>%
+    pull(Metric) %>%
+    head(1)
+
+metric_clean_name <- trimws(sub("^.* - ", "", highest_volume_metric))
+
+ggplot(df_wide, aes(x = Date, y = !!sym(highest_volume_metric))) +
+    geom_line(color = "#8E44AD", linewidth = 1.2) +
+    geom_point(color = "#8E44AD", size = 2) +
+    geom_smooth(method = "loess", color = "darkgray", linetype = "dashed", se = FALSE) +
+    scale_y_continuous(labels = comma) +
+    scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
+    theme_minimal() +
+    labs(
+        title = paste("Destaque:", metric_clean_name),
+        subtitle = "Métrica com o maior volume registrado ao longo do período",
+        x = "Ano",
+        y = "Ocorrências"
+    )
+```
+
+**Conclusão**: Esta análise demonstra que reestruturar os dados da segurança pública (`ssp_data`) para um formato amplo (*wide*) permite uma exploração rápida e programática das tendências em todo o estado. A infraestrutura de dados atual é robusta o suficiente para ser segmentada facilmente por região utilizando o arquivo `df_wide_regiao.csv` para extrair insights municipais localizados.
